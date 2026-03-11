@@ -45,7 +45,14 @@ def carregar_dados(cnpj,comp):
             with open(f,"r",encoding="utf-8") as file:
 
                 js=json.load(file)
-                res=js.get("result",js)
+
+                # ---------- CORREÇÃO AQUI ----------
+                if isinstance(js,dict):
+                    res=js.get("result",js)
+                elif isinstance(js,list):
+                    res=js
+                else:
+                    res=[]
 
                 if isinstance(res,list):
                     data.extend(res)
@@ -157,8 +164,6 @@ c4.metric("Folha Total",format_br(dados["f_tot"]))
 
 st.divider()
 
-# ---------- GRÁFICO DE CUSTOS ----------
-
 st.subheader("Composição de Custos")
 
 custos=pd.DataFrame({
@@ -200,7 +205,6 @@ with col1:
     if not df_f.empty:
 
         df_forn=df_f[df_f["tipoMovimento"]=="Entrada"]
-
         df_forn=df_forn.sort_values("valorTotal",ascending=False)
 
         for _,row in df_forn.iterrows():
@@ -208,7 +212,6 @@ with col1:
             fornecedor=row.get("razaoSocialClienteFornecedor","Fornecedor")
             valor=row.get("valorTotal",0)
             nf=row.get("numero","")
-            data=row.get("dataEmissao","")
 
             titulo=f"{fornecedor} | NF {nf} | {format_br(valor)}"
 
@@ -250,9 +253,7 @@ with col2:
         if "razaoSocialClienteFornecedor" in df_cli.columns:
 
             top=df_cli.groupby("razaoSocialClienteFornecedor")["valorTotal"].sum().reset_index()
-
             top=top.sort_values("valorTotal",ascending=True).tail(8)
-
             top["valor_fmt"]=top["valorTotal"].apply(format_br)
 
             fig=px.bar(
@@ -272,86 +273,3 @@ with col2:
             )
 
             st.plotly_chart(fig,use_container_width=True)
-
-st.divider()
-
-st.subheader("Top Fonte de Faturamento")
-
-if not df_f.empty:
-
-    fontes=[]
-
-    for _,row in df_f.iterrows():
-
-        if row["tipoMovimento"]=="Prestado":
-
-            if "itens" in row and isinstance(row["itens"],list):
-
-                for i in row["itens"]:
-
-                    nome=None
-
-                    if "nomeServico" in i and i["nomeServico"]:
-                        nome=i["nomeServico"]
-
-                    elif "descricaoProduto" in i and i["descricaoProduto"]:
-                        nome=i["descricaoProduto"]
-
-                    else:
-                        nome="Receita"
-
-                    fontes.append({
-                        "fonte":nome,
-                        "valor":i.get("valorItem",0)
-                    })
-
-    if fontes:
-
-        df_fontes=pd.DataFrame(fontes)
-
-        top=df_fontes.groupby("fonte")["valor"].sum().reset_index()
-
-        top=top.sort_values("valor").tail(8)
-
-        top["valor_fmt"]=top["valor"].apply(format_br)
-
-        fig=px.bar(
-        top,
-        x="valor",
-        y="fonte",
-        orientation="h",
-        text="valor_fmt",
-        color_discrete_sequence=["#38bdf8"]
-        )
-
-        fig.update_layout(
-        plot_bgcolor="rgba(0,0,0,0)",
-        paper_bgcolor="rgba(0,0,0,0)",
-        font_color="white",
-        height=400
-        )
-
-        st.plotly_chart(fig,use_container_width=True)
-
-st.subheader("Folha de Pagamento")
-
-if not df_d.empty:
-
-    nome_col="nome" if "nome" in df_d.columns else "nomeTrabalhador"
-
-    df_view=df_d[[nome_col,"tipoRecibo","totalProventos","totalLiquido"]]
-
-    df_view=df_view.rename(columns={
-    nome_col:"Nome",
-    "tipoRecibo":"Função",
-    "totalProventos":"Proventos",
-    "totalLiquido":"Líquido"
-    })
-
-    st.dataframe(
-    df_view.style.format({
-    "Proventos":format_br,
-    "Líquido":format_br
-    }),
-    use_container_width=True
-    )
