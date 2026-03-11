@@ -8,12 +8,8 @@ import plotly.express as px
 # Configuração da Página
 st.set_page_config(layout="wide", page_title="Portal BI - Macro Contábil")
 
-# Paleta de Cores Estratégica
-colors = {
-    "faturamento": "#38bdf8",  # Azul claro
-    "custos": "#475569",       # Cinza ardósia (mais elegante que vermelho)
-    "texto": "white"
-}
+# Estilização
+colors = {"accent": "#38bdf8"}
 
 # Banco de Usuários
 usuarios_db = {
@@ -45,6 +41,7 @@ def carregar_dados(cnpj, comp):
         path = os.path.join(pasta, sub, f"*{cnpj}_{comp}.json")
         files = glob.glob(path)
         data = []
+
         for f in files:
             with open(f, "r", encoding="utf-8") as file:
                 js = json.load(file)
@@ -54,12 +51,17 @@ def carregar_dados(cnpj, comp):
                     res = js
                 else:
                     res = []
+
                 if isinstance(res, list):
                     data.extend(res)
                 elif isinstance(res, dict):
-                    if "documentos" in res: data.extend(res["documentos"])
-                    elif "recibos" in res: data.extend(res["recibos"])
-                    else: data.append(res)
+                    if "documentos" in res:
+                        data.extend(res["documentos"])
+                    elif "recibos" in res:
+                        data.extend(res["recibos"])
+                    else:
+                        data.append(res)
+
         df = pd.DataFrame(data)
         if not df.empty:
             df.columns = [c.split(".")[-1] for c in df.columns]
@@ -72,13 +74,16 @@ def carregar_dados(cnpj, comp):
     vals = {"fat": 0, "ent": 0, "fgts": 0, "inss": 0, "sn": 0, "f_liq": 0, "f_tot": 0}
 
     if not df_f.empty:
+        # AJUSTE: Faturamento agora considera "Prestado" (Serviço) e "Saída" (Comércio)
         vals["fat"] = df_f[df_f["tipoMovimento"].isin(["Prestado", "Saída"])]["valorTotal"].sum()
         vals["ent"] = df_f[df_f["tipoMovimento"] == "Entrada"]["valorTotal"].sum()
+
     if not df_d.empty:
         vals["f_liq"] = df_d.get("totalLiquido", 0).sum()
         vals["fgts"] = df_d.get("valorFGTS", 0).sum()
         vals["inss"] = df_d.get("INSSSegurado", 0).sum()
         vals["f_tot"] = df_d.get("totalProventos", 0).sum()
+
     if not df_a.empty:
         if isinstance(df_a.iloc[0], pd.Series):
             vals["sn"] = df_a.iloc[0].get("TOTAL_APURADO", 0)
@@ -90,18 +95,6 @@ def carregar_dados(cnpj, comp):
 
     return vals, df_f, df_d
 
-# --- NOVO: Função para o gráfico comparativo ---
-def carregar_historico(cnpj, lista_comps):
-    hist = []
-    for c in lista_comps:
-        v, _, _ = carregar_dados(cnpj, c)
-        hist.append({
-            "Competência": comp_br(c),
-            "Faturamento": v["fat"],
-            "Custos": v["ent"] + v["f_tot"] + v["sn"]
-        })
-    return pd.DataFrame(hist)
-
 # Sistema de Autenticação
 if "auth" not in st.session_state:
     st.session_state.auth = False
@@ -110,6 +103,7 @@ if not st.session_state.auth:
     st.title("Portal Macro Contábil")
     user_input = st.text_input("Usuário")
     senha_input = st.text_input("Senha", type="password")
+
     if st.button("Entrar"):
         if user_input in usuarios_db and usuarios_db[user_input]["senha"] == senha_input:
             st.session_state.auth = True
@@ -121,11 +115,11 @@ if not st.session_state.auth:
 
 # Dashboard Principal
 user = st.session_state.user
-comps = ["202601", "202602", "202603"]
 
 with st.sidebar:
     st.title("Macro Contábil")
     st.write(f"Bem-vindo **{user['nome']}**")
+    comps = ["202601", "202602", "202603"]
     comp = st.selectbox("Competência", comps, format_func=lambda x: comp_br(x))
     if st.button("Sair"):
         st.session_state.auth = False
@@ -136,13 +130,14 @@ dados, df_f, df_d = carregar_dados(user["cnpj"], comp)
 st.title(user["nome"])
 st.subheader("Análise Contábil Preliminar")
 
-# Métricas Principais
+# Primeira Linha de Métricas
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Faturamento Total", format_br(dados["fat"]))
 c2.metric("Entradas/Compras", format_br(dados["ent"]))
 c3.metric("Folha Líquida", format_br(dados["f_liq"]))
 c4.metric("Resultado Estimado", format_br(dados["res"]))
 
+# Segunda Linha de Métricas
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("FGTS", format_br(dados["fgts"]), format_pct(dados["al_fgts"]))
 c2.metric("INSS", format_br(dados["inss"]), format_pct(dados["al_inss"]))
@@ -151,83 +146,75 @@ c4.metric("Custo Total Folha", format_br(dados["f_tot"]))
 
 st.divider()
 
-# --- NOVO: SEÇÃO DE EVOLUÇÃO MENSAL ---
-st.subheader("📊 Evolução Mensal (Faturamento vs Custos)")
-df_hist = carregar_historico(user["cnpj"], comps)
+# Gráfico de Composição de Custos
+st.subheader("Composição de Custos")
+custos = pd.DataFrame({
+    "Categoria": ["Compras", "Folha", "Impostos"],
+    "Valor": [dados["ent"], dados["f_tot"], dados["sn"]]
+})
+custos["valor_fmt"] = custos["Valor"].apply(format_br)
 
-# Criando o gráfico bonito
-fig_evolucao = px.bar(
-    df_hist, 
-    x="Competência", 
-    y=["Faturamento", "Custos"],
-    barmode="group",
-    color_discrete_map={"Faturamento": colors["faturamento"], "Custos": colors["custos"]},
-    text_auto='.2s'
-)
-
-fig_evolucao.update_layout(
-    legend_title_text="",
-    xaxis_title="",
-    yaxis_title="Valor (R$)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    paper_bgcolor="rgba(0,0,0,0)",
-    font_color="white",
-    height=400,
-    hovermode="x unified"
-)
-st.plotly_chart(fig_evolucao, use_container_width=True)
+fig_pie = px.pie(custos, values="Valor", names="Categoria", hole=0.45)
+fig_pie.update_traces(text=custos["valor_fmt"], textposition="inside")
+fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=420)
+st.plotly_chart(fig_pie, use_container_width=True)
 
 st.divider()
 
-# Composição de Custos e Maiores Clientes/Fornecedores
-col_pizza, col_cli = st.columns([1, 1])
+# Colunas de Fornecedores e Clientes
+col1, col2 = st.columns([1.3, 1])
 
-with col_pizza:
-    st.subheader("Divisão de Custos (Mês Atual)")
-    custos_df = pd.DataFrame({
-        "Categoria": ["Compras", "Folha", "Impostos"],
-        "Valor": [dados["ent"], dados["f_tot"], dados["sn"]]
-    })
-    fig_pie = px.pie(custos_df, values="Valor", names="Categoria", hole=0.45,
-                     color_discrete_sequence=[colors["custos"], "#94a3b8", "#1e293b"])
-    fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=350)
-    st.plotly_chart(fig_pie, use_container_width=True)
-
-with col_cli:
-    st.subheader("Principais Clientes")
+with col1:
+    st.subheader("Maiores Fornecedores")
     if not df_f.empty:
+        df_forn = df_f[df_f["tipoMovimento"] == "Entrada"]
+        df_forn = df_forn.sort_values("valorTotal", ascending=False)
+        for _, row in df_forn.iterrows():
+            fornecedor = row.get("razaoSocialClienteFornecedor", "Fornecedor")
+            valor = row.get("valorTotal", 0)
+            nf = row.get("numero", "")
+            titulo = f"{fornecedor} | NF {nf} | {format_br(valor)}"
+            with st.expander(titulo):
+                if "itens" in row and isinstance(row["itens"], list):
+                    itens = [{"Produto": i.get("descricaoProduto", ""), "Quantidade": i.get("quantidade", 0), 
+                              "Valor Unitário": i.get("valorUnitario", 0), "Total": i.get("valorTotal", 0)} for i in row["itens"]]
+                    if itens:
+                        df_itens = pd.DataFrame(itens)
+                        st.dataframe(df_itens.style.format({"Valor Unitário": format_br, "Total": format_br}), use_container_width=True)
+
+with col2:
+    st.subheader("Maiores Clientes")
+    if not df_f.empty:
+        # AJUSTE: Gráfico de clientes agora considera Prestado + Saída
         df_cli = df_f[df_f["tipoMovimento"].isin(["Prestado", "Saída"])]
         if "razaoSocialClienteFornecedor" in df_cli.columns:
             top = df_cli.groupby("razaoSocialClienteFornecedor")["valorTotal"].sum().reset_index()
-            top = top.sort_values("valorTotal", ascending=True).tail(5)
-            fig_bar = px.bar(top, x="valorTotal", y="razaoSocialClienteFornecedor", orientation="h",
-                             color_discrete_sequence=[colors["faturamento"]])
-            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=350, xaxis_title="", yaxis_title="")
+            top = top.sort_values("valorTotal", ascending=True).tail(8)
+            top["valor_fmt"] = top["valorTotal"].apply(format_br)
+            fig_bar = px.bar(top, x="valorTotal", y="razaoSocialClienteFornecedor", orientation="h", text="valor_fmt", color_discrete_sequence=[colors["accent"]])
+            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=400)
             st.plotly_chart(fig_bar, use_container_width=True)
 
+# NOVA SEÇÃO: FOLHA DE PAGAMENTO
 st.divider()
+st.subheader("Detalhamento da Folha de Pagamento")
 
-# Maiores Fornecedores
-st.subheader("🔍 Detalhes de Fornecedores (Entradas)")
-if not df_f.empty:
-    df_forn = df_f[df_f["tipoMovimento"] == "Entrada"].sort_values("valorTotal", ascending=False)
-    for _, row in df_forn.iterrows():
-        fornecedor = row.get("razaoSocialClienteFornecedor", "Fornecedor")
-        valor = row.get("valorTotal", 0)
-        nf = row.get("numero", "")
-        with st.expander(f"{fornecedor} | NF {nf} | {format_br(valor)}"):
-            if "itens" in row and isinstance(row["itens"], list):
-                df_itens = pd.DataFrame([{"Produto": i.get("descricaoProduto", ""), "Qtd": i.get("quantidade", 0), 
-                                          "V.Unit": i.get("valorUnitario", 0), "Total": i.get("valorTotal", 0)} for i in row["itens"]])
-                st.dataframe(df_itens.style.format({"V.Unit": format_br, "Total": format_br}), use_container_width=True)
-
-# Tabela da Folha
-st.divider()
-st.subheader("👥 Detalhamento da Folha de Pagamento")
 if not df_d.empty:
+    # Verifica qual coluna de nome existe no JSON
     nome_col = "nome" if "nome" in df_d.columns else "nomeTrabalhador"
+    
+    # Seleção e renomeação de colunas conforme solicitado
+    # Usamos .get() para evitar erro se uma coluna específica não existir
     df_folha_view = df_d[[nome_col, "tipoRecibo", "totalProventos", "totalLiquido"]].copy()
     df_folha_view.columns = ["Nome", "Função/Tipo", "Salário Bruto", "Salário Líquido"]
-    st.dataframe(df_folha_view.style.format({"Salário Bruto": format_br, "Salário Líquido": format_br}), use_container_width=True, hide_index=True)
+
+    st.dataframe(
+        df_folha_view.style.format({
+            "Salário Bruto": format_br,
+            "Salário Líquido": format_br
+        }),
+        use_container_width=True,
+        hide_index=True
+    )
 else:
-    st.info("Sem dados de folha para este período.")
+    st.info("Nenhum dado de folha de pagamento encontrado para esta competência.")
