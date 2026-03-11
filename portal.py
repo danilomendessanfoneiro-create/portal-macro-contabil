@@ -31,7 +31,7 @@ def comp_br(c):
 
 def carregar_dados(cnpj,comp):
 
-    pasta=r"C:\oneflow_bi\dados_powerbi"
+    pasta="dados_powerbi"
 
     def ler(sub):
 
