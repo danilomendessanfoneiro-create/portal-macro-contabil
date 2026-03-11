@@ -1,18 +1,1 @@
-{
-    "code": "200",
-    "result": {
-        "cidade": "VARGINHA (MG)",
-        "documento": "59.001.330/0001-44",
-        "estado": "MG",
-        "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 7,
-        "qtdSaidaPrestado": 2,
-        "razao": "TP TRANSPORTES TAVARES PAULINO LTDA",
-        "regimeApuracao": "Regime de Competência",
-        "regimeTributario": "Simples Nacional",
-        "statusApuracao": "Finalizado",
-        "valorEntradaTomado": 7644.46,
-        "valorSaidaPrestado": 9350
-    },
-    "_req_uuid": "3f430b20-1cb6-11f1-b8e8-3b28e97d19cc"
-}
+"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
