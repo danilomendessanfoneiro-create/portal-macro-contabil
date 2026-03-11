@@ -1,0 +1,9 @@
+usuarios_db={
+"Danilo":{"senha":"ABCdef123!","cnpj":"44796416000133","nome":"Danilo"},
+"Tamara53786":{"senha":"ABCdef123!","cnpj":"53786069000159","nome":"Tamara"},
+"Edirsabino":{"senha":"ABCdef123!","cnpj":"41721197000135","nome":"Edir Sabino"},
+"GSPrest":{"senha":"ABCdef123!","cnpj":"31958666000180","nome":"GS Prest"},
+"HamiltonAdriano":{"senha":"ABCdef123!","cnpj":"00000000000000","nome":"Hamilton Adriano"},
+"Paulaes":{"senha":"ABCdef123!","cnpj":"21805265000137","nome":"Paula ES"},
+"Solution":{"senha":"ABCdef123!","cnpj":"22834381000147","nome":"Solution"},
+"Tptransporte":{"senha":"ABCdef123!","cnpj":"59001330000144","nome":"TP Transporte"}
