@@ -1,0 +1,109 @@
+import requests
+import json
+import os
+
+# --- CONFIGURAÇÕES ---
+# Substitua APENAS o refresh_token abaixo com o valor que você me enviou
+REFRESH_TOKEN = "C/d8FFflC2NrzcR2I6XQX/FDdJDyNeay/e2yy6fOHckMDoKrWQrAxxKVRJ9ZbUOX7tw3h0NZamq+dgh+rqZ0A=="
+PASTA_RAIZ = r"C:\oneflow_bi\dados_powerbi"
+PERIODOS = ["202601", "202602", "202603"] 
+
+ENDPOINTS = {
+    "notas_detalhe": "/oneflow/empresa/fiscal/documentos/listar",
+    "totais_faturamento": "/oneflow/empresa/fiscal/documentos/totais",
+    "resumo_apuracao": "/oneflow/empresa/fiscal/apuracao/resumo",
+    "simples_aliquotas": "/oneflow/empresa/fiscal/simplesnacional/aliquotas",
+    "quantidade_notas": "/oneflow/empresa/fiscal/documentos/quantidade"
+}
+
+# Variável global que será preenchida automaticamente
+USER_TOKEN = ""
+
+def renovar_token_principal():
+    """Usa o refresh_token para obter um novo USER_TOKEN (JWT)"""
+    global USER_TOKEN
+    url = "https://app.omie.com.br/api/portal/users/me/token/"
+    headers = {"Authorization": f"Bearer {REFRESH_TOKEN}"}
+    
+    print("🔄 Renovando token de acesso principal...")
+    try:
+        res = requests.get(url, headers=headers)
+        if res.status_code == 200:
+            USER_TOKEN = res.json().get('token')
+            print("✅ Token renovado com sucesso!")
+            return True
+        else:
+            print(f"❌ Erro ao renovar token: {res.status_code} - {res.text}")
+            return False
+    except Exception as e:
+        print(f"⚠️ Falha na conexão de refresh: {e}")
+        return False
+
+def preparar_pastas():
+    if not os.path.exists(PASTA_RAIZ): os.makedirs(PASTA_RAIZ)
+    for sub in ENDPOINTS.keys():
+        caminho = os.path.join(PASTA_RAIZ, sub)
+        if not os.path.exists(caminho): os.makedirs(caminho)
+
+def buscar_hash_escritorio():
+    url = "https://app.omie.com.br/api/portal/apps/"
+    headers = {"Authorization": f"Bearer {USER_TOKEN}"}
+    res = requests.get(url, headers=headers)
+    if res.status_code == 200:
+        app = next((a for a in res.json() if a.get('app_type') == 'ONEFLOW'), None)
+        return app['app_hash'] if app else None
+    return None
+
+def gerar_token_especifico(hash_alvo):
+    url = f"https://app.omie.com.br/api/portal/apps/{hash_alvo}/token/"
+    headers = {"Authorization": f"Bearer {USER_TOKEN}"}
+    res = requests.get(url, headers=headers)
+    return res.json().get('token') if res.status_code == 200 else None
+
+def listar_clientes(token_esc, hash_esc):
+    url = "https://rest.oneflow.com.br/api/oneflow/escritorio/empresas/listar?pagina=1"
+    headers = {"Authorization": f"Bearer {token_esc}", "app-hash": hash_esc}
+    res = requests.get(url, headers=headers)
+    return res.json().get('result', {}).get('empresas', []) if res.status_code == 200 else []
+
+def extrair_fiscal(token_empresa, cnpj, nome, competencia):
+    for chave, rota in ENDPOINTS.items():
+        url = f"https://rest.oneflow.com.br/api{rota}?competencia={competencia}"
+        headers = {"Authorization": f"Bearer {token_empresa}", "Accept": "application/json"}
+        try:
+            res = requests.get(url, headers=headers)
+            if res.status_code == 200:
+                dados = res.json()
+                if dados:
+                    arquivo = f"{chave}_{cnpj}_{competencia}.json"
+                    caminho = os.path.join(PASTA_RAIZ, chave, arquivo)
+                    with open(caminho, 'w', encoding='utf-8') as f:
+                        json.dump(dados, f, ensure_ascii=False, indent=4)
+                    print(f"      [OK] {chave} ({competencia})")
+        except Exception as e:
+            print(f"      [ERRO] {chave} em {competencia}: {e}")
+
+# --- EXECUÇÃO PRINCIPAL ---
+if __name__ == "__main__":
+    preparar_pastas()
+    
+    # 1. Tenta renovar o token antes de começar
+    if renovar_token_principal():
+        h_esc = buscar_hash_escritorio()
+        
+        if h_esc:
+            tk_esc = gerar_token_especifico(h_esc)
+            empresas = listar_clientes(tk_esc, h_esc)
+            
+            for emp in empresas:
+                print(f"\n--- Fiscal: {emp['razao']} ---")
+                cnpj_limpo = emp['cnpj'].replace('.', '').replace('/', '').replace('-', '')
+                tk_emp = gerar_token_especifico(emp['apphash'])
+                
+                if tk_emp:
+                    for mes in PERIODOS:
+                        extrair_fiscal(tk_emp, cnpj_limpo, emp['razao'], mes)
+        
+        print(f"\nExtração FISCAL concluída!")
+    else:
+        print("🛑 Não foi possível iniciar o processo devido a erro na renovação do Token.")

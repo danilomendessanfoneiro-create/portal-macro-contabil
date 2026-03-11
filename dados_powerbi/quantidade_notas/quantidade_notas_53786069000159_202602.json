@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "53.786.069/0001-59",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 1640,
+        "qtdSaidaPrestado": 893,
+        "razao": "53.786.069 TAMARA DE PAULA LIMA",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Simples Nacional",
+        "statusApuracao": "Finalizado",
+        "valorEntradaTomado": 42249.3,
+        "valorSaidaPrestado": 51220.58
+    },
+    "_req_uuid": "f01803c0-1cb5-11f1-a20e-a37dd1bb0266"
+}

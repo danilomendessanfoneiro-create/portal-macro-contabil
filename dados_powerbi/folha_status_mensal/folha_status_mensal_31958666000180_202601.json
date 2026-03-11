@@ -1,0 +1,14 @@
+{
+    "code": "200",
+    "result": {
+        "statusDaFolha": {
+            "competencia": "202601",
+            "status": "Fechada",
+            "statusData": "04/02/2026",
+            "statusHora": "09:12:56",
+            "tipoFolha": "Mensal",
+            "usuario": "Danilo Mendes"
+        }
+    },
+    "_req_uuid": "efeee8d0-1c71-11f1-b893-0d979feccc62"
+}

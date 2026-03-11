@@ -1,0 +1,26 @@
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "02/2026",
+                "modelo": "NF-e",
+                "quantidade": 1,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 381.55
+            },
+            {
+                "competencia": "02/2026",
+                "modelo": "NF-e",
+                "quantidade": 49,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 17075.28
+            }
+        ]
+    },
+    "_req_uuid": "071617b0-1cb6-11f1-ba59-e9cf2c045e0e"
+}

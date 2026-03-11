@@ -1,0 +1,65 @@
+{
+    "code": "200",
+    "result": {
+        "recibos": [
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "092.097.146-60",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "GILSON DA SILVA",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 0,
+                "baseINSS": 0,
+                "baseIRPF": 0,
+                "cpf": "948.297.306-25",
+                "dataPagamento": "06/03/2026",
+                "INSSSegurado": 0,
+                "matricula": "10",
+                "multiploVinculo": "Não",
+                "nome": "MARCOS ROSENDO",
+                "tipoRecibo": "Desligamento",
+                "totalDescontos": 0,
+                "totalInformativos": 0,
+                "totalLiquido": 0,
+                "totalProventos": 0,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 2600,
+                "baseINSS": 2600,
+                "baseIRPF": 2600,
+                "cpf": "122.492.266-28",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 209.68,
+                "matricula": "12",
+                "multiploVinculo": "Não",
+                "nome": "JEAN AGUILAR CALIXTO",
+                "tipoRecibo": "Mensalista e Horista",
+                "totalDescontos": 209.68,
+                "totalInformativos": 0,
+                "totalLiquido": 2390.32,
+                "totalProventos": 2600,
+                "valorFGTS": 208,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 4429
+    },
+    "_req_uuid": "f3bd55f0-1c71-11f1-be72-df635f60b406"
+}

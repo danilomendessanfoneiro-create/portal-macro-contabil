@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "41.721.197/0001-35",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 49,
+        "qtdSaidaPrestado": 0,
+        "razao": "EDIR SABINO DOS REIS 09236646611",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Simples Nacional",
+        "statusApuracao": "Finalizado",
+        "valorEntradaTomado": 17075.28,
+        "valorSaidaPrestado": 0
+    },
+    "_req_uuid": "08d9c0b0-1cb6-11f1-8cbc-9117637268cc"
+}

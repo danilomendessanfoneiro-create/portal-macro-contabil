@@ -1,0 +1,34 @@
+{
+    "code": "200",
+    "result": {
+        "folha": [
+            {
+                "codigoFolha": "1"
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2023-08-01T08:11:28",
+                                "cargo": "ADMINISTRADOR",
+                                "categoria": 723,
+                                "jornada": "",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "1",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "092.366.466-11",
+                    "dataNascimento": "1987-03-10T08:11:28",
+                    "nomeCompleto": "EDIR SABINO DOS REIS",
+                    "pis": "           ",
+                    "sexo": "Masculino"
+                }
+            }
+        ]
+    },
+    "_req_uuid": "e25094d0-1c71-11f1-8304-d196640d35c1"
+}

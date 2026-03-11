@@ -1,0 +1,29 @@
+{
+    "code": "200",
+    "result": {
+        "recibos": [
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "092.366.466-11",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "EDIR SABINO DOS REIS",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 1621
+    },
+    "_req_uuid": "e82ef630-1c71-11f1-93c9-2f7bcde456a5"
+}

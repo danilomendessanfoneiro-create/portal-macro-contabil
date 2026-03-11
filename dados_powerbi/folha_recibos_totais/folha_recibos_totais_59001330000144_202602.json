@@ -1,0 +1,65 @@
+{
+    "code": "200",
+    "result": {
+        "recibos": [
+            {
+                "baseFGTS": 2664.02,
+                "baseINSS": 2664.02,
+                "baseIRPF": 2664.02,
+                "cpf": "035.749.236-60",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 215.44,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "RICARDO SANTANA",
+                "tipoRecibo": "Mensalista e Horista",
+                "totalDescontos": 215.44,
+                "totalInformativos": 0,
+                "totalLiquido": 3088.58,
+                "totalProventos": 3304.02,
+                "valorFGTS": 213.12,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "013.924.426-30",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "2",
+                "multiploVinculo": "Não",
+                "nome": "CRISTIANE BARBARA TAVARES",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "009.946.566-37",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "3",
+                "multiploVinculo": "Não",
+                "nome": "ALESSANDRA MIGUEL PAULINO",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 6759.14
+    },
+    "_req_uuid": "1a961950-1c72-11f1-bcff-d5133c1142c1"
+}

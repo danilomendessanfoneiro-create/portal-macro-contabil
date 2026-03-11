@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "44.796.416/0001-33",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 1,
+        "qtdSaidaPrestado": 0,
+        "razao": "44.796.416 DANILO MENDES",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "MEI",
+        "statusApuracao": "Não iniciado",
+        "valorEntradaTomado": 65,
+        "valorSaidaPrestado": 0
+    },
+    "_req_uuid": "c38ad530-1cb5-11f1-8882-77dba24c6b91"
+}

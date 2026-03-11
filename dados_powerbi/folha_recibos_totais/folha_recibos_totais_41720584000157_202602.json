@@ -1,0 +1,29 @@
+{
+    "code": "200",
+    "result": {
+        "recibos": [
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "048.055.326-29",
+                "dataPagamento": "27/02/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "HAMILTON ADRIANO QUINTINO",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 1621
+    },
+    "_req_uuid": "fdc033b0-1c71-11f1-85c0-cf8c723afc0a"
+}

@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "22.834.381/0001-47",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 3,
+        "qtdSaidaPrestado": 0,
+        "razao": "SOLUTION DO BRASIL DISTRIBUIDORA LTDA",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Regime Normal - Lucro Presumido",
+        "statusApuracao": "Não iniciado",
+        "valorEntradaTomado": 543.4,
+        "valorSaidaPrestado": 0
+    },
+    "_req_uuid": "32990230-1cb6-11f1-a55a-e7c92c7cc83e"
+}

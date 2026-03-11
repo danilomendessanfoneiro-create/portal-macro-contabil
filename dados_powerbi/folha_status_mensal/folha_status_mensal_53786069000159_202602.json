@@ -1,0 +1,14 @@
+{
+    "code": "200",
+    "result": {
+        "statusDaFolha": {
+            "competencia": {},
+            "status": {},
+            "statusData": {},
+            "statusHora": {},
+            "tipoFolha": {},
+            "usuario": {}
+        }
+    },
+    "_req_uuid": "dcd08010-1c71-11f1-9a7f-c3deaade30e3"
+}

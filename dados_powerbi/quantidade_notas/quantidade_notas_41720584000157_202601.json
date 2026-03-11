@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "41.720.584/0001-57",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 10,
+        "qtdSaidaPrestado": 0,
+        "razao": "HAMILTON ADRIANO QUINTINO 04805532629",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Simples Nacional",
+        "statusApuracao": "Finalizado",
+        "valorEntradaTomado": 4404.07,
+        "valorSaidaPrestado": 0
+    },
+    "_req_uuid": "1d0c0a70-1cb6-11f1-a4c2-6f97429e70b9"
+}

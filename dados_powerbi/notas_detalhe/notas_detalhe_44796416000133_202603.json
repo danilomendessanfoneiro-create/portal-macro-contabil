@@ -1,0 +1,53 @@
+{
+    "code": "200",
+    "result": {
+        "documentos": [
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "04/03/2026",
+                "dataEscrituracao": "05/03/2026",
+                "documentoClienteFornecedor": "52.527.619/0001-52",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "17.02",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "EMISSAO DE CERTIFICADO DIGITAL",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 4.91,
+                        "issRetencao": false,
+                        "issValor": 3.19,
+                        "nomeServico": "Datilografia, digitação, estenografia",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 65
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "2600000006182",
+                "origem": "Importação da Prefeitura",
+                "razaoSocialClienteFornecedor": "CERTIGUARD SOLUCOES DIGITAIS LTDA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 65
+            }
+        ]
+    },
+    "_req_uuid": "c16954c0-1cb5-11f1-bbec-0f00e8d4a6dd"
+}

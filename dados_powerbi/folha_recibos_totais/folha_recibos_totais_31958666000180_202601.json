@@ -1,0 +1,83 @@
+{
+    "code": "200",
+    "result": {
+        "recibos": [
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseIRPF": 1621,
+                "cpf": "092.097.146-60",
+                "dataPagamento": "30/01/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "GILSON DA SILVA",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 76.16,
+                "baseINSS": 76.16,
+                "baseIRPF": 76.16,
+                "cpf": "948.297.306-25",
+                "dataPagamento": "30/01/2026",
+                "INSSSegurado": 5.71,
+                "matricula": "10",
+                "multiploVinculo": "Não",
+                "nome": "MARCOS ROSENDO",
+                "tipoRecibo": "Mensalista e Horista",
+                "totalDescontos": 5.71,
+                "totalInformativos": 0,
+                "totalLiquido": 137.99,
+                "totalProventos": 143.7,
+                "valorFGTS": 6.09,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 1274.03,
+                "baseINSS": 1274.03,
+                "baseIRPF": 1274.03,
+                "cpf": "099.354.706-01",
+                "dataPagamento": "30/01/2026",
+                "INSSSegurado": 95.54,
+                "matricula": "11",
+                "multiploVinculo": "Não",
+                "nome": "EDUARDO CAMPOS MONTEIRO",
+                "tipoRecibo": "Desligamento",
+                "totalDescontos": 95.54,
+                "totalInformativos": 0,
+                "totalLiquido": 2200.39,
+                "totalProventos": 2295.93,
+                "valorFGTS": 101.92,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 2682.73,
+                "baseINSS": 2682.73,
+                "baseIRPF": 2682.73,
+                "cpf": "122.492.266-28",
+                "dataPagamento": "30/01/2026",
+                "INSSSegurado": 217.12,
+                "matricula": "12",
+                "multiploVinculo": "Não",
+                "nome": "JEAN AGUILAR CALIXTO",
+                "tipoRecibo": "Mensalista e Horista",
+                "totalDescontos": 217.12,
+                "totalInformativos": 0,
+                "totalLiquido": 2465.61,
+                "totalProventos": 2682.73,
+                "valorFGTS": 214.61,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 6906.93
+    },
+    "_req_uuid": "f09058f0-1c71-11f1-acbc-df92319f4c46"
+}

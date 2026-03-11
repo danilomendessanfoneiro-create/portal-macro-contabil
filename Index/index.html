@@ -1,0 +1,60 @@
+<script>
+function login() {
+    var usuarioInput = document.getElementById("usuario").value;
+    var senhaInput = document.getElementById("senha").value;
+    var erro = document.getElementById("erro");
+
+    // LISTA DE ACESSO DOS SEUS CLIENTES
+    const usuariosPermitidos = {
+        "Danilo": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "Tamara53786": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "Edirsabino": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "GSPrest": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "HamiltonAdriano": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "Paulaes": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "Solution": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        },
+        "Tptransporte": {
+            senha: "ABCdef123!",
+            link: "COLE_O_LINK_AQUI"
+        }
+    };
+
+    // VERIFICAÇÃO DE LOGIN
+    const user = usuariosPermitidos[usuarioInput];
+
+    if (user && user.senha === senhaInput) {
+        // Se acertar, carrega o link específico e mostra o portal
+        document.getElementById("dashboard").src = user.link;
+        document.getElementById("login").style.display = "none";
+        document.getElementById("portal").style.display = "block";
+    } else {
+        // Se errar, mostra a mensagem
+        erro.innerText = "Usuário ou senha inválidos";
+    }
+}
+
+function logout() {
+    location.reload();
+}
+</script>

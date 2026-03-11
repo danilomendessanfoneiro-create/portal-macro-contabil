@@ -1,0 +1,15 @@
+{
+    "code": "200",
+    "result": {
+        "iss": [
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 2.01,
+                "CODIGO_FEDERAL": "16.02     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Outros serviços transp nat municipal.   ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            }
+        ]
+    },
+    "_req_uuid": "3e36a430-1cb6-11f1-a523-a34d6b174c6b"
+}

@@ -1,0 +1,80 @@
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "01/2026",
+                "modelo": "CT-e",
+                "quantidade": 910,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 7541.06
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 5,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 166.74
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 853,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 22554.69
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 3,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 23689.78
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 6,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 296.04
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 922,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 47878.76
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NF-e",
+                "quantidade": 5,
+                "situacao": "Inutilizado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 0
+            },
+            {
+                "competencia": "01/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 13,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 948.8
+            }
+        ]
+    },
+    "_req_uuid": "d6441380-1cb5-11f1-a55a-e7c92c7cc83e"
+}

@@ -1,0 +1,80 @@
+{
+    "code": "200",
+    "result": {
+        "folha": [
+            {
+                "codigoFolha": "1"
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2025-04-01T08:12:58",
+                                "cargo": "ADMINISTRADOR",
+                                "categoria": 723,
+                                "jornada": "",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "2",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "013.924.426-30",
+                    "dataNascimento": "1980-07-07T08:12:58",
+                    "nomeCompleto": "CRISTIANE BARBARA TAVARES",
+                    "pis": "           ",
+                    "sexo": "Feminino"
+                }
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2025-04-01T08:12:58",
+                                "cargo": "ADMINISTRADOR",
+                                "categoria": 723,
+                                "jornada": "",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "3",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "009.946.566-37",
+                    "dataNascimento": "1976-10-13T08:12:58",
+                    "nomeCompleto": "ALESSANDRA MIGUEL PAULINO",
+                    "pis": "           ",
+                    "sexo": "Feminino"
+                }
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2025-02-20T08:12:58",
+                                "cargo": "MOTORISTA CARRETEIRO",
+                                "categoria": 101,
+                                "jornada": "Jornada Importada do e-Social",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "1",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "035.749.236-60",
+                    "dataNascimento": "1978-04-07T08:12:58",
+                    "nomeCompleto": "RICARDO SANTANA",
+                    "pis": "           ",
+                    "sexo": "Masculino"
+                }
+            }
+        ]
+    },
+    "_req_uuid": "18005340-1c72-11f1-97d9-ab34930cc106"
+}

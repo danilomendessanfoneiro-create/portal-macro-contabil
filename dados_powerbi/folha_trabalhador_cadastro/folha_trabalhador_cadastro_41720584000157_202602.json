@@ -1,0 +1,34 @@
+{
+    "code": "200",
+    "result": {
+        "folha": [
+            {
+                "codigoFolha": "1"
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2026-01-01T08:12:10",
+                                "cargo": "ADMINISTRADOR",
+                                "categoria": 722,
+                                "jornada": "",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "1",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "048.055.326-29",
+                    "dataNascimento": "1979-03-01T08:12:10",
+                    "nomeCompleto": "HAMILTON ADRIANO QUINTINO",
+                    "pis": "           ",
+                    "sexo": "Masculino"
+                }
+            }
+        ]
+    },
+    "_req_uuid": "fbc770f0-1c71-11f1-a648-cdc170236e04"
+}

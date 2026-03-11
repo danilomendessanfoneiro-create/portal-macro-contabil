@@ -1,0 +1,21 @@
+2️⃣ Vá até a pasta do script
+
+Seu script precisa estar salvo em um arquivo .py.
+
+Exemplo:
+
+C:\oneflow_bi\extrator_oneflow.py
+
+Então no CMD digite:
+
+cd C:\oneflow_bi
+
+Agora o CMD deve ficar assim:
+
+C:\oneflow_bi>
+
+
+ACionar o programa
+
+PS C:\Users\macro> cd C:\oneflow_bi\
+PS C:\oneflow_bi> streamlit run portal.py

@@ -1,0 +1,36 @@
+{
+    "code": "200",
+    "result": {
+        "eventos": [
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "048.055.326-29",
+                                "matricula": "1",
+                                "nomeCompleto": "HAMILTON ADRIANO QUINTINO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ]
+        ]
+    },
+    "_req_uuid": "f9553870-1c71-11f1-8e6e-3f62c30e3d65"
+}

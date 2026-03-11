@@ -1,0 +1,36 @@
+{
+    "code": "200",
+    "result": {
+        "eventos": [
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "092.366.466-11",
+                                "matricula": "1",
+                                "nomeCompleto": "EDIR SABINO DOS REIS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ]
+        ]
+    },
+    "_req_uuid": "e9caf2f0-1c71-11f1-a648-cdc170236e04"
+}

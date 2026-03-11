@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "31.958.666/0001-80",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 23,
+        "qtdSaidaPrestado": 12,
+        "razao": "GILSON DA SILVA 09209714660",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Simples Nacional",
+        "statusApuracao": "Finalizado",
+        "valorEntradaTomado": 17181.2,
+        "valorSaidaPrestado": 87800
+    },
+    "_req_uuid": "101ede00-1cb6-11f1-bcff-d5133c1142c1"
+}
