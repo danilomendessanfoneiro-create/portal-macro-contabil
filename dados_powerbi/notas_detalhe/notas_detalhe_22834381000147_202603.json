@@ -1,1 +1,98 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "documentos": [
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "04/03/2026",
+                "dataEscrituracao": "04/03/2026",
+                "documentoClienteFornecedor": "15.754.475/0001-40",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "1.07",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Manutenção de serviço de hospedagem",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 2,
+                        "issRetencao": false,
+                        "issValor": 0.04,
+                        "nomeServico": "Suporte técnico em informática",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 1.99
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "1573266",
+                "origem": "Importação da Prefeitura",
+                "razaoSocialClienteFornecedor": "HOSTGATOR BRASIL LTDA.",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 1.99
+            },
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "10/03/2026",
+                "dataEscrituracao": "10/03/2026",
+                "documentoClienteFornecedor": "09.622.441/0001-08",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "14.01",
+                        "cofinsAliquota": 3,
+                        "cofinsRetencao": true,
+                        "cofinsValor": 6.9,
+                        "csllAliquota": 1,
+                        "csllRetencao": true,
+                        "csllValor": 2.3,
+                        "descricaoServico": "OS 003860 VEIC GFC8J78   ALIN.DIANT/ BALAN. RODA    BOL.4X",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 1,
+                        "irrfRetencao": true,
+                        "irrfValor": 2.3,
+                        "issAliquota": 3,
+                        "issRetencao": false,
+                        "issValor": 6.9,
+                        "nomeServico": "Lubrificação, limpeza, lustração",
+                        "pisAliquota": 0.65,
+                        "pisRetencao": true,
+                        "pisValor": 1.5,
+                        "valorItem": 230
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "16209",
+                "origem": "Importação da Prefeitura",
+                "razaoSocialClienteFornecedor": "BRITTO S SERVICE CENTER LTDA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 230
+            }
+        ]
+    },
+    "_req_uuid": "2d8e2df0-1d39-11f1-ac89-85ab927f3ddf"
+}

@@ -1,1 +1,18 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "cidade": "VARGINHA (MG)",
+        "documento": "53.786.069/0001-59",
+        "estado": "MG",
+        "prefeituraHabilitado": "Sim",
+        "qtdEntradaTomado": 272,
+        "qtdSaidaPrestado": 32,
+        "razao": "53.786.069 TAMARA DE PAULA LIMA",
+        "regimeApuracao": "Regime de Competência",
+        "regimeTributario": "Simples Nacional",
+        "statusApuracao": "Não iniciado",
+        "valorEntradaTomado": 21879.36,
+        "valorSaidaPrestado": 2826.02
+    },
+    "_req_uuid": "f9f9d570-1d38-11f1-be3a-7b4ecacfad50"
+}

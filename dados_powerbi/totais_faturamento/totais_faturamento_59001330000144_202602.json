@@ -1,1 +1,35 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "02/2026",
+                "modelo": "NF-e",
+                "quantidade": 6,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 7509.46
+            },
+            {
+                "competencia": "02/2026",
+                "modelo": "NFS-e",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 135
+            },
+            {
+                "competencia": "02/2026",
+                "modelo": "NFS-e",
+                "quantidade": 2,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 9350
+            }
+        ]
+    },
+    "_req_uuid": "32cf64f0-1d39-11f1-9b8a-9b93c7c34f29"
+}

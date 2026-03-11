@@ -1,1 +1,134 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "iss": [
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.08,
+                "CODIGO_FEDERAL": "7.10      ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Limpeza,manutenção e conservação de vias",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.08,
+                "CODIGO_FEDERAL": "7.10      ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Limpeza,manutenção e conservação de vias",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            }
+        ]
+    },
+    "_req_uuid": "15d380c0-1d39-11f1-b278-3373a7ab956e"
+}
