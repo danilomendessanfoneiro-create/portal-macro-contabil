@@ -1,7 +1,6 @@
 import requests
 import json
 import os
-import time
 
 # ---------------- CONFIGURAÇÕES ---------------- #
 
@@ -55,6 +54,7 @@ def renovar_token_usuario():
         print("✅ Token renovado e salvo com sucesso.")
         return novo["token"]
     else:
+        # Se der erro 403 ou 401 aqui, você precisará atualizar o JSON manualmente uma vez
         raise Exception(f"Erro na renovação: {res.status_code} - {res.text}")
 
 # ---------------- INFRAESTRUTURA ---------------- #
@@ -97,12 +97,13 @@ def listar_clientes(token_esc, hash_esc):
         return res.json().get('result', {}).get('empresas', [])
     return []
 
-# ---------------- EXTRAÇÃO FISCAL COM RETRY E TIMEOUT ---------------- #
+# ---------------- EXTRAÇÃO FISCAL ---------------- #
 
 def extrair_fiscal(token_empresa, cnpj, nome, competencia):
     for chave, rota in ENDPOINTS.items():
         url = f"https://rest.oneflow.com.br/api{rota}?competencia={competencia}"
         
+        # Inserção do parâmetro obrigatório para o resumo fiscal
         if chave == "resumo_apuracao":
             url += "&imposto=SIMPLES"
 
@@ -111,38 +112,20 @@ def extrair_fiscal(token_empresa, cnpj, nome, competencia):
             "Accept": "application/json"
         }
 
-        # Configurações de resiliência
-        tentativas = 3
-        
-        for i in range(tentativas):
-            try:
-                # timeout=120: Espera até 2 minutos por resposta (ideal para notas_detalhe pesadas)
-                res = requests.get(url, headers=headers, timeout=120)
-
-                if res.status_code == 200:
-                    dados = res.json()
-                    if dados:
-                        arquivo = f"{chave}_{cnpj}_{competencia}.json"
-                        caminho = os.path.join(PASTA_RAIZ, chave, arquivo)
-                        with open(caminho, 'w', encoding='utf-8') as f:
-                            json.dump(dados, f, ensure_ascii=False, indent=4)
-                        print(f"      [OK] {chave} ({competencia})")
-                    break # Sucesso! Sai das tentativas.
-
-                elif res.status_code == 504:
-                    print(f"      [AVISO] {chave} ({competencia}) - Timeout 504 (Servidor Ocupado). Tentativa {i+1}/{tentativas}...")
-                    time.sleep(3) # Espera 3 segundos antes de tentar de novo
-                
-                else:
-                    print(f"      [AVISO] {chave} ({competencia}) - Status: {res.status_code}")
-                    break # Se for outro erro (ex: 401 ou 404), não adianta repetir.
-
-            except requests.exceptions.Timeout:
-                print(f"      [AVISO] {chave} ({competencia}) - Tempo esgotado no Python. Tentativa {i+1}/{tentativas}...")
-                time.sleep(2)
-            except Exception as e:
-                print(f"      [ERRO] {chave} em {competencia}: {e}")
-                break
+        try:
+            res = requests.get(url, headers=headers)
+            if res.status_code == 200:
+                dados = res.json()
+                if dados:
+                    arquivo = f"{chave}_{cnpj}_{competencia}.json"
+                    caminho = os.path.join(PASTA_RAIZ, chave, arquivo)
+                    with open(caminho, 'w', encoding='utf-8') as f:
+                        json.dump(dados, f, ensure_ascii=False, indent=4)
+                    print(f"      [OK] {chave} ({competencia})")
+            else:
+                print(f"      [AVISO] {chave} ({competencia}) - Status: {res.status_code}")
+        except Exception as e:
+            print(f"      [ERRO] {chave} em {competencia}: {e}")
 
 # ---------------- EXECUÇÃO PRINCIPAL ---------------- #
 
