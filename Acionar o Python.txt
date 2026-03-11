@@ -19,3 +19,13 @@ ACionar o programa
 
 PS C:\Users\macro> cd C:\oneflow_bi\
 PS C:\oneflow_bi> streamlit run portal.py
+
+
+Renovar o portal.py
+
+git add portal.py
+
+git commit -m "Atualização Geral"
+
+git push
+
