@@ -5,17 +5,14 @@ import os
 import glob
 import plotly.express as px
 
-# Configuração da Página
 st.set_page_config(layout="wide", page_title="Portal BI - Macro Contábil")
 
-# Paleta de Cores Estratégica
 colors = {
-    "faturamento": "#38bdf8",  # Azul claro
-    "custos": "#475569",       # Cinza ardósia (mais elegante que vermelho)
+    "faturamento": "#38bdf8",
+    "custos": "#475569",
     "texto": "white"
 }
 
-# Banco de Usuários
 usuarios_db = {
     "Danilo": {"senha": "ABCdef123!", "cnpj": "44796416000133", "nome": "Danilo"},
     "Tamara53786": {"senha": "ABCdef123!", "cnpj": "53786069000159", "nome": "Tamara"},
@@ -27,7 +24,6 @@ usuarios_db = {
     "Tptransporte": {"senha": "ABCdef123!", "cnpj": "59001330000144", "nome": "TP Transporte"}
 }
 
-# Funções de Formatação
 def format_br(valor):
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
@@ -37,131 +33,210 @@ def format_pct(valor):
 def comp_br(c):
     return f"{c[4:6]}/{c[:4]}"
 
-# Função de Carga de Dados
 def carregar_dados(cnpj, comp):
+
     pasta = "dados_powerbi"
 
     def ler(sub):
+
         path = os.path.join(pasta, sub, f"*{cnpj}_{comp}.json")
+
         files = glob.glob(path)
+
         data = []
+
         for f in files:
-            with open(f, "r", encoding="utf-8") as file:
-                js = json.load(file)
-                if isinstance(js, dict):
-                    res = js.get("result", js)
-                elif isinstance(js, list):
-                    res = js
+
+            with open(f,"r",encoding="utf-8") as file:
+
+                js=json.load(file)
+
+                if isinstance(js,dict):
+                    res=js.get("result",js)
+                elif isinstance(js,list):
+                    res=js
                 else:
-                    res = []
-                if isinstance(res, list):
+                    res=[]
+
+                if isinstance(res,list):
                     data.extend(res)
-                elif isinstance(res, dict):
-                    if "documentos" in res: data.extend(res["documentos"])
-                    elif "recibos" in res: data.extend(res["recibos"])
-                    else: data.append(res)
-        df = pd.DataFrame(data)
+                elif isinstance(res,dict):
+
+                    if "documentos" in res:
+                        data.extend(res["documentos"])
+
+                    elif "recibos" in res:
+                        data.extend(res["recibos"])
+
+                    elif "totais" in res:
+                        data.extend(res["totais"])
+
+                    else:
+                        data.append(res)
+
+        df=pd.DataFrame(data)
+
         if not df.empty:
-            df.columns = [c.split(".")[-1] for c in df.columns]
+            df.columns=[c.split(".")[-1] for c in df.columns]
+
         return df
 
-    df_f = ler("notas_detalhe")
-    df_d = ler("folha_recibos_totais")
-    df_a = ler("resumo_apuracao")
+    df_f=ler("notas_detalhe")
+    df_d=ler("folha_recibos_totais")
+    df_a=ler("resumo_apuracao")
+    df_t=ler("totais_faturamento")
 
-    vals = {"fat": 0, "ent": 0, "fgts": 0, "inss": 0, "sn": 0, "f_liq": 0, "f_tot": 0}
+    vals={"fat":0,"ent":0,"fgts":0,"inss":0,"sn":0,"f_liq":0,"f_tot":0}
+
+    # ---------------- FATURAMENTO ----------------
 
     if not df_f.empty:
-        vals["fat"] = df_f[df_f["tipoMovimento"].isin(["Prestado", "Saída"])]["valorTotal"].sum()
-        vals["ent"] = df_f[df_f["tipoMovimento"] == "Entrada"]["valorTotal"].sum()
+
+        vals["fat"]=df_f[df_f["tipoMovimento"].isin(["Prestado","Saída"])]["valorTotal"].sum()
+
+        vals["ent"]=df_f[df_f["tipoMovimento"]=="Entrada"]["valorTotal"].sum()
+
+    else:
+
+        if not df_t.empty:
+
+            df_emit=df_t[(df_t["tipoMovimento"]=="Saída") & (df_t["situacao"]=="Emitido")]
+
+            vals["fat"]=df_emit["valorTotal"].sum()
+
+            df_ent=df_t[(df_t["tipoMovimento"]=="Entrada") & (df_t["situacao"]=="Emitido")]
+
+            vals["ent"]=df_ent["valorTotal"].sum()
+
+    # ---------------- FOLHA ----------------
+
     if not df_d.empty:
-        vals["f_liq"] = df_d.get("totalLiquido", 0).sum()
-        vals["fgts"] = df_d.get("valorFGTS", 0).sum()
-        vals["inss"] = df_d.get("INSSSegurado", 0).sum()
-        vals["f_tot"] = df_d.get("totalProventos", 0).sum()
+
+        vals["f_liq"]=df_d.get("totalLiquido",0).sum()
+
+        vals["fgts"]=df_d.get("valorFGTS",0).sum()
+
+        vals["inss"]=df_d.get("INSSSegurado",0).sum()
+
+        vals["f_tot"]=df_d.get("totalProventos",0).sum()
+
+    # ---------------- SIMPLES ----------------
+
     if not df_a.empty:
-        if isinstance(df_a.iloc[0], pd.Series):
-            vals["sn"] = df_a.iloc[0].get("TOTAL_APURADO", 0)
 
-    vals["res"] = vals["fat"] - (vals["ent"] + vals["f_liq"] + vals["inss"] + vals["fgts"])
-    vals["al_fgts"] = vals["fgts"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
-    vals["al_inss"] = vals["inss"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
-    vals["al_sn"] = vals["sn"] / vals["fat"] if vals["fat"] > 0 else 0
+        if isinstance(df_a.iloc[0],pd.Series):
 
-    return vals, df_f, df_d
+            vals["sn"]=df_a.iloc[0].get("TOTAL_APURADO",0)
 
-# --- NOVO: Função para o gráfico comparativo ---
-def carregar_historico(cnpj, lista_comps):
-    hist = []
+    vals["res"]=vals["fat"]-(vals["ent"]+vals["f_liq"]+vals["inss"]+vals["fgts"])
+
+    vals["al_fgts"]=vals["fgts"]/vals["f_tot"] if vals["f_tot"]>0 else 0
+
+    vals["al_inss"]=vals["inss"]/vals["f_tot"] if vals["f_tot"]>0 else 0
+
+    vals["al_sn"]=vals["sn"]/vals["fat"] if vals["fat"]>0 else 0
+
+    return vals,df_f,df_d
+
+def carregar_historico(cnpj,lista_comps):
+
+    hist=[]
+
     for c in lista_comps:
-        v, _, _ = carregar_dados(cnpj, c)
+
+        v,_,_=carregar_dados(cnpj,c)
+
         hist.append({
-            "Competência": comp_br(c),
-            "Faturamento": v["fat"],
-            "Custos": v["ent"] + v["f_tot"] + v["sn"]
+            "Competência":comp_br(c),
+            "Faturamento":v["fat"],
+            "Custos":v["ent"]+v["f_tot"]+v["sn"]
         })
+
     return pd.DataFrame(hist)
 
-# Sistema de Autenticação
+# -------- LOGIN --------
+
 if "auth" not in st.session_state:
-    st.session_state.auth = False
+    st.session_state.auth=False
 
 if not st.session_state.auth:
+
     st.title("Portal Macro Contábil")
-    user_input = st.text_input("Usuário")
-    senha_input = st.text_input("Senha", type="password")
+
+    user_input=st.text_input("Usuário")
+
+    senha_input=st.text_input("Senha",type="password")
+
     if st.button("Entrar"):
-        if user_input in usuarios_db and usuarios_db[user_input]["senha"] == senha_input:
-            st.session_state.auth = True
-            st.session_state.user = usuarios_db[user_input]
+
+        if user_input in usuarios_db and usuarios_db[user_input]["senha"]==senha_input:
+
+            st.session_state.auth=True
+            st.session_state.user=usuarios_db[user_input]
             st.rerun()
+
         else:
             st.error("Usuário ou senha inválidos")
+
     st.stop()
 
-# Dashboard Principal
-user = st.session_state.user
-comps = ["202601", "202602", "202603"]
+# -------- DASHBOARD --------
+
+user=st.session_state.user
+
+comps=["202601","202602","202603"]
 
 with st.sidebar:
+
     st.title("Macro Contábil")
+
     st.write(f"Bem-vindo **{user['nome']}**")
-    comp = st.selectbox("Competência", comps, format_func=lambda x: comp_br(x))
+
+    comp=st.selectbox("Competência",comps,format_func=lambda x:comp_br(x))
+
     if st.button("Sair"):
-        st.session_state.auth = False
+
+        st.session_state.auth=False
         st.rerun()
 
-dados, df_f, df_d = carregar_dados(user["cnpj"], comp)
+dados,df_f,df_d=carregar_dados(user["cnpj"],comp)
 
 st.title(user["nome"])
+
 st.subheader("Análise Contábil Preliminar")
 
-# Métricas Principais
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Faturamento Total", format_br(dados["fat"]))
-c2.metric("Entradas/Compras", format_br(dados["ent"]))
-c3.metric("Folha Líquida", format_br(dados["f_liq"]))
-c4.metric("Resultado Estimado", format_br(dados["res"]))
+c1,c2,c3,c4=st.columns(4)
 
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("FGTS", format_br(dados["fgts"]), format_pct(dados["al_fgts"]))
-c2.metric("INSS", format_br(dados["inss"]), format_pct(dados["al_inss"]))
-c3.metric("Simples Nacional", format_br(dados["sn"]), format_pct(dados["al_sn"]))
-c4.metric("Custo Total Folha", format_br(dados["f_tot"]))
+c1.metric("Faturamento Total",format_br(dados["fat"]))
+
+c2.metric("Entradas/Compras",format_br(dados["ent"]))
+
+c3.metric("Folha Líquida",format_br(dados["f_liq"]))
+
+c4.metric("Resultado Estimado",format_br(dados["res"]))
+
+c1,c2,c3,c4=st.columns(4)
+
+c1.metric("FGTS",format_br(dados["fgts"]),format_pct(dados["al_fgts"]))
+
+c2.metric("INSS",format_br(dados["inss"]),format_pct(dados["al_inss"]))
+
+c3.metric("Simples Nacional",format_br(dados["sn"]),format_pct(dados["al_sn"]))
+
+c4.metric("Custo Total Folha",format_br(dados["f_tot"]))
 
 st.divider()
 
-# --- NOVO: SEÇÃO DE EVOLUÇÃO MENSAL ---
 st.subheader("📊 Evolução Mensal (Faturamento vs Custos)")
-df_hist = carregar_historico(user["cnpj"], comps)
 
-# Criando o gráfico bonito
-fig_evolucao = px.bar(
-    df_hist, 
-    x="Competência", 
-    y=["Faturamento", "Custos"],
+df_hist=carregar_historico(user["cnpj"],comps)
+
+fig_evolucao=px.bar(
+    df_hist,
+    x="Competência",
+    y=["Faturamento","Custos"],
     barmode="group",
-    color_discrete_map={"Faturamento": colors["faturamento"], "Custos": colors["custos"]},
+    color_discrete_map={"Faturamento":colors["faturamento"],"Custos":colors["custos"]},
     text_auto='.2s'
 )
 
@@ -172,62 +247,7 @@ fig_evolucao.update_layout(
     plot_bgcolor="rgba(0,0,0,0)",
     paper_bgcolor="rgba(0,0,0,0)",
     font_color="white",
-    height=400,
-    hovermode="x unified"
+    height=400
 )
-st.plotly_chart(fig_evolucao, use_container_width=True)
 
-st.divider()
-
-# Composição de Custos e Maiores Clientes/Fornecedores
-col_pizza, col_cli = st.columns([1, 1])
-
-with col_pizza:
-    st.subheader("Divisão de Custos (Mês Atual)")
-    custos_df = pd.DataFrame({
-        "Categoria": ["Compras", "Folha", "Impostos"],
-        "Valor": [dados["ent"], dados["f_tot"], dados["sn"]]
-    })
-    fig_pie = px.pie(custos_df, values="Valor", names="Categoria", hole=0.45,
-                     color_discrete_sequence=[colors["custos"], "#94a3b8", "#1e293b"])
-    fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=350)
-    st.plotly_chart(fig_pie, use_container_width=True)
-
-with col_cli:
-    st.subheader("Principais Clientes")
-    if not df_f.empty:
-        df_cli = df_f[df_f["tipoMovimento"].isin(["Prestado", "Saída"])]
-        if "razaoSocialClienteFornecedor" in df_cli.columns:
-            top = df_cli.groupby("razaoSocialClienteFornecedor")["valorTotal"].sum().reset_index()
-            top = top.sort_values("valorTotal", ascending=True).tail(5)
-            fig_bar = px.bar(top, x="valorTotal", y="razaoSocialClienteFornecedor", orientation="h",
-                             color_discrete_sequence=[colors["faturamento"]])
-            fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=350, xaxis_title="", yaxis_title="")
-            st.plotly_chart(fig_bar, use_container_width=True)
-
-st.divider()
-
-# Maiores Fornecedores
-st.subheader("🔍 Detalhes de Fornecedores (Entradas)")
-if not df_f.empty:
-    df_forn = df_f[df_f["tipoMovimento"] == "Entrada"].sort_values("valorTotal", ascending=False)
-    for _, row in df_forn.iterrows():
-        fornecedor = row.get("razaoSocialClienteFornecedor", "Fornecedor")
-        valor = row.get("valorTotal", 0)
-        nf = row.get("numero", "")
-        with st.expander(f"{fornecedor} | NF {nf} | {format_br(valor)}"):
-            if "itens" in row and isinstance(row["itens"], list):
-                df_itens = pd.DataFrame([{"Produto": i.get("descricaoProduto", ""), "Qtd": i.get("quantidade", 0), 
-                                          "V.Unit": i.get("valorUnitario", 0), "Total": i.get("valorTotal", 0)} for i in row["itens"]])
-                st.dataframe(df_itens.style.format({"V.Unit": format_br, "Total": format_br}), use_container_width=True)
-
-# Tabela da Folha
-st.divider()
-st.subheader("👥 Detalhamento da Folha de Pagamento")
-if not df_d.empty:
-    nome_col = "nome" if "nome" in df_d.columns else "nomeTrabalhador"
-    df_folha_view = df_d[[nome_col, "tipoRecibo", "totalProventos", "totalLiquido"]].copy()
-    df_folha_view.columns = ["Nome", "Função/Tipo", "Salário Bruto", "Salário Líquido"]
-    st.dataframe(df_folha_view.style.format({"Salário Bruto": format_br, "Salário Líquido": format_br}), use_container_width=True, hide_index=True)
-else:
-    st.info("Sem dados de folha para este período.")
+st.plotly_chart(fig_evolucao,use_container_width=True)
