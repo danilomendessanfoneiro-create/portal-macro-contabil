@@ -5,13 +5,13 @@
             {
                 "competencia": "03/2026",
                 "modelo": "NF-e",
-                "quantidade": 28,
+                "quantidade": 29,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
-                "valorTotal": 8074.39
+                "valorTotal": 8146.97
             }
         ]
     },
-    "_req_uuid": "90422540-1d71-11f1-bfb2-9b0351b93c88"
+    "_req_uuid": "a5aa0330-1dfd-11f1-af90-79901dc35536"
 }
