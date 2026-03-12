@@ -29,3 +29,15 @@ git commit -m "Atualização Geral"
 
 git push
 
+
+
+Fluxo correto sempre que alterar o portal
+1️⃣ editar portal.py
+2️⃣ salvar arquivo
+3️⃣ git add portal.py
+4️⃣ git commit -m "mensagem"
+5️⃣ git push
+
+Depois disso o Streamlit Cloud / Vercel / servidor atualiza automaticamente.
+
+⏱ Normalmente leva 30s até 2 minutos.
