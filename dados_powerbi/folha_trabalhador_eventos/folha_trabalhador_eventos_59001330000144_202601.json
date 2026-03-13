@@ -24,11 +24,11 @@
                 {
                     "ferias": [
                         {
-                            "finalDasFerias": "2026-01-20T14:41:30",
+                            "finalDasFerias": "2026-01-20T15:02:59",
                             "finalDoAbono": "",
                             "idEvento": "     7105670054",
                             "idFerias": "     7105619173",
-                            "inicioDasFerias": "2025-12-22T14:41:30",
+                            "inicioDasFerias": "2025-12-22T15:02:59",
                             "inicioDoAbono": "",
                             "periodoAquisitivo": "20/02/2025 a 19/02/2026",
                             "qtdDiasAbono": 0
@@ -99,5 +99,5 @@
             ]
         ]
     },
-    "_req_uuid": "deb0fce0-1f03-11f1-8e54-7f3fd6844760"
+    "_req_uuid": "debdedd0-1f06-11f1-a252-390e701530e1"
 }
