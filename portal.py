@@ -66,6 +66,7 @@ def carregar_dados(cnpj, comp):
 
         df = pd.DataFrame(data)
         if not df.empty:
+            # Limpa nomes de colunas vindo da API
             df.columns = [c.split(".")[-1] for c in df.columns]
         return df
 
@@ -76,23 +77,35 @@ def carregar_dados(cnpj, comp):
 
     vals = {"fat": 0, "ent": 0, "fgts": 0, "inss": 0, "sn": 0, "f_liq": 0, "f_tot": 0}
 
-    # ---------------- LÓGICA DE FATURAMENTO E ENTRADAS (COM FALLBACK) ----------------
+    # ---------------- LÓGICA DE FATURAMENTO E ENTRADAS ----------------
 
+    # Tentativa 1: Notas Detalhadas
     if not df_f.empty:
-        # Se houver detalhamento, usa a regra: Saída/Prestado = Faturamento | Entrada = Entradas
+        df_f['tipoMovimento'] = df_f['tipoMovimento'].astype(str).str.strip()
         vals["fat"] = df_f[df_f["tipoMovimento"].isin(["Prestado", "Saída"])]["valorTotal"].sum()
         vals["ent"] = df_f[df_f["tipoMovimento"] == "Entrada"]["valorTotal"].sum()
-    else:
-        # PLANO B: Se não houver detalhe, busca nos totais_faturamento
-        if not df_t.empty:
-            # Filtra apenas o que foi Emitido para garantir precisão
-            df_emitido = df_t[df_t["situacao"] == "Emitido"]
-            
-            # Faturamento: Saída + Prestado
-            vals["fat"] = df_emitido[df_emitido["tipoMovimento"].isin(["Saída", "Prestado"])]["valorTotal"].sum()
-            
-            # Entradas: Entrada + Tomado
-            vals["ent"] = df_emitido[df_emitido["tipoMovimento"].isin(["Entrada", "Tomado"])]["valorTotal"].sum()
+    
+    # Tentativa 2: Totais Faturamento (Fallback)
+    if (vals["fat"] == 0 and vals["ent"] == 0) and not df_t.empty:
+        # Garante que as colunas existem e limpa strings
+        if "situacao" in df_t.columns:
+            df_t["situacao"] = df_t["situacao"].astype(str).str.strip()
+        
+        # Filtra apenas o que é Emitido
+        df_emitido = df_t[df_t.get("situacao") == "Emitido"].copy()
+        
+        if not df_emitido.empty:
+            # Caso a chave tipoMovimento falhe, tentamos localizar o valor na linha inteira
+            def check_mov(row, tipos):
+                return any(str(val).strip() in tipos for val in row.values)
+
+            # Faturamento: Saída ou Prestado
+            mask_fat = df_emitido.apply(lambda r: check_mov(r, ["Saída", "Prestado"]), axis=1)
+            vals["fat"] = df_emitido[mask_fat]["valorTotal"].sum()
+
+            # Entradas: Entrada ou Tomado
+            mask_ent = df_emitido.apply(lambda r: check_mov(r, ["Entrada", "Tomado"]), axis=1)
+            vals["ent"] = df_emitido[mask_ent]["valorTotal"].sum()
 
     # ---------------- FOLHA ----------------
     if not df_d.empty:
@@ -106,7 +119,7 @@ def carregar_dados(cnpj, comp):
         if isinstance(df_a.iloc[0], pd.Series):
             vals["sn"] = df_a.iloc[0].get("TOTAL_APURADO", 0)
 
-    # Cálculos finais
+    # Cálculos Finais
     vals["res"] = vals["fat"] - (vals["ent"] + vals["f_liq"] + vals["inss"] + vals["fgts"])
     vals["al_fgts"] = vals["fgts"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
     vals["al_inss"] = vals["inss"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
@@ -133,7 +146,6 @@ if not st.session_state.auth:
     st.title("Portal Macro Contábil")
     user_input = st.text_input("Usuário")
     senha_input = st.text_input("Senha", type="password")
-
     if st.button("Entrar"):
         if user_input in usuarios_db and usuarios_db[user_input]["senha"] == senha_input:
             st.session_state.auth = True
