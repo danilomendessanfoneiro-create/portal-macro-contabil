@@ -33,17 +33,17 @@
         "SN_PA_MERC_EXTERNO_CAIXA": 0,
         "SN_PA_MERC_EXTERNO_COMPETENCIA": 0,
         "SN_PA_MERC_INTERNO_CAIXA": 0,
-        "SN_PA_MERC_INTERNO_COMPETENCIA": 3597.69,
+        "SN_PA_MERC_INTERNO_COMPETENCIA": 3654.49,
         "SN_RBA_MERC_EXTERNO": 0,
-        "SN_RBA_MERC_INTERNO": 76047.52,
+        "SN_RBA_MERC_INTERNO": 76104.32,
         "SN_RBT12_MERC_EXTERNO": 0,
         "SN_RBT12_MERC_INTERNO": 95292.88,
         "SN_VFOLHA": 1581.87,
         "STATUS": "A",
-        "TOTAL_APURADO": 143.9,
+        "TOTAL_APURADO": 146.17,
         "TOTAL_BASE_CALCULO": 0,
         "TOTAL_MES_ANTERIOR": 0,
         "TOTAL_PROXIMO_MES": 0
     },
-    "_req_uuid": "14e22280-1f13-11f1-8969-757d98b4c77d"
+    "_req_uuid": "fa97bcc0-1fa1-11f1-b655-0d2cbaa876dc"
 }
