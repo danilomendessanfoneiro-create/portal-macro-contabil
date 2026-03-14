@@ -100,13 +100,11 @@ def carregar_dados(cnpj, comp):
 
     vals = {"fat":0,"ent":0,"fgts":0,"inss":0,"sn":0,"f_liq":0,"f_tot":0}
 
-    # FATURAMENTO DETALHADO
     if not df_f.empty and "tipoMovimento" in df_f.columns:
         df_f["valorTotal"] = pd.to_numeric(df_f.get("valorTotal",0), errors="coerce").fillna(0)
         vals["fat"] = df_f[df_f["tipoMovimento"].isin(["Prestado","Saída"])]["valorTotal"].sum()
         vals["ent"] = df_f[df_f["tipoMovimento"].isin(["Entrada","Tomado"])]["valorTotal"].sum()
 
-    # FALLBACK TOTAL
     if vals["fat"] == 0 and not df_t.empty:
         df_t["valorTotal"] = pd.to_numeric(df_t.get("valorTotal",0), errors="coerce").fillna(0)
         if "situacao" in df_t.columns:
@@ -115,28 +113,24 @@ def carregar_dados(cnpj, comp):
             vals["fat"] = df_t[df_t["tipoMovimento"].isin(["Prestado","Saída"])]["valorTotal"].sum()
             vals["ent"] = df_t[df_t["tipoMovimento"].isin(["Entrada","Tomado"])]["valorTotal"].sum()
 
-    # FOLHA
     if not df_d.empty:
         vals["f_liq"] = pd.to_numeric(df_d.get("totalLiquido",0), errors="coerce").fillna(0).sum()
         vals["fgts"] = pd.to_numeric(df_d.get("valorFGTS",0), errors="coerce").fillna(0).sum()
         vals["inss"] = pd.to_numeric(df_d.get("INSSSegurado",0), errors="coerce").fillna(0).sum()
         vals["f_tot"] = pd.to_numeric(df_d.get("totalProventos",0), errors="coerce").fillna(0).sum()
 
-    # SIMPLES
     if not df_a.empty:
         try:
             vals["sn"] = df_a.iloc[0].get("TOTAL_APURADO",0)
         except:
             vals["sn"] = 0
 
-    # CALCULOS
     vals["res"] = vals["fat"] - (vals["ent"] + vals["f_liq"] + vals["inss"] + vals["fgts"])
     vals["al_fgts"] = vals["fgts"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
     vals["al_inss"] = vals["inss"] / vals["f_tot"] if vals["f_tot"] > 0 else 0
     vals["al_sn"] = vals["sn"] / vals["fat"] if vals["fat"] > 0 else 0
 
     return vals, df_f, df_d
-
 
 # ---------------- LOGIN ----------------
 
@@ -201,12 +195,7 @@ custos = pd.DataFrame({
 custos["valor_fmt"] = custos["Valor"].apply(format_br)
 fig = px.pie(custos, values="Valor", names="Categoria", hole=0.45)
 fig.update_traces(text=custos["valor_fmt"], textposition="inside")
-fig.update_layout(
-    plot_bgcolor="rgba(0,0,0,0)",
-    paper_bgcolor="rgba(0,0,0,0)",
-    font_color="white",
-    height=420
-)
+fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=420)
 st.plotly_chart(fig, use_container_width=True)
 
 st.divider()
@@ -231,21 +220,44 @@ with col1:
                     df_itens = pd.DataFrame(row["itens"])
                     
                     if not df_itens.empty:
-                        # Limpa nomes de colunas (remove prefixos do JSON)
                         df_itens.columns = [c.split(".")[-1] for c in df_itens.columns]
 
-                        # Mapeamento de colunas solicitadas
-                        cols_desejadas = {
-                            "descricao": "Descrição",
-                            "quantidade": "Qtd",
-                            "valorUnitario": "Vlr. Unitário",
-                            "valorTotal": "Vlr. Total"
+                        # --- BUSCA INTELIGENTE DE COLUNAS ---
+                        # 1. Busca Descrição
+                        for c_desc in ["descricao", "xProd", "nome", "item", "servico", "descricaoProduto"]:
+                            if c_desc in df_itens.columns:
+                                df_itens = df_itens.rename(columns={c_desc: "DESC_FINAL"})
+                                break
+                        
+                        # 2. Busca Quantidade
+                        for c_qtd in ["quantidade", "qCom", "qtd", "unidades"]:
+                            if c_qtd in df_itens.columns:
+                                df_itens = df_itens.rename(columns={c_qtd: "QTD_FINAL"})
+                                break
+
+                        # 3. Busca Valor Unitário
+                        for c_uni in ["valorUnitario", "vUnCom", "precoUnitario", "valor_unitario"]:
+                            if c_uni in df_itens.columns:
+                                df_itens = df_itens.rename(columns={c_uni: "VLR_UNIT_FINAL"})
+                                break
+
+                        # 4. Busca Valor Total
+                        for c_tot in ["valorTotal", "vProd", "valor_total", "totalItem"]:
+                            if c_tot in df_itens.columns:
+                                df_itens = df_itens.rename(columns={c_tot: "VLR_TOT_FINAL"})
+                                break
+
+                        # Mapeamento Final para Exibição
+                        mapeamento = {
+                            "DESC_FINAL": "Descrição",
+                            "QTD_FINAL": "Qtd",
+                            "VLR_UNIT_FINAL": "Vlr. Unitário",
+                            "VLR_TOT_FINAL": "Vlr. Total"
                         }
 
-                        # Filtra apenas as que existem no dataframe para evitar erro
-                        cols_finais = [c for c in cols_desejadas.keys() if c in df_itens.columns]
+                        cols_finais = [c for c in mapeamento.keys() if c in df_itens.columns]
                         df_exibir = df_itens[cols_finais].copy()
-                        df_exibir.rename(columns=cols_desejadas, inplace=True)
+                        df_exibir.rename(columns=mapeamento, inplace=True)
 
                         st.dataframe(df_exibir, use_container_width=True, hide_index=True)
                     else:
@@ -258,20 +270,9 @@ with col2:
         top_cli = df_cli.groupby("razaoSocialClienteFornecedor")["valorTotal"].sum().reset_index()
         top_cli = top_cli.sort_values("valorTotal").tail(8)
 
-        fig = px.bar(
-            top_cli,
-            x="valorTotal",
-            y="razaoSocialClienteFornecedor",
-            orientation="h",
-            text=top_cli["valorTotal"].apply(format_br),
-            color_discrete_sequence=[colors["accent"]]
-        )
-        fig.update_layout(
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            font_color="white",
-            height=400
-        )
+        fig = px.bar(top_cli, x="valorTotal", y="razaoSocialClienteFornecedor", orientation="h",
+                     text=top_cli["valorTotal"].apply(format_br), color_discrete_sequence=[colors["accent"]])
+        fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white", height=400)
         st.plotly_chart(fig, use_container_width=True)
 
 st.divider()
@@ -281,13 +282,10 @@ st.divider()
 st.subheader("Folha de Pagamento")
 if not df_d.empty:
     nome_col = "nome" if "nome" in df_d.columns else "nomeTrabalhador"
-    # Garante que as colunas existam antes de filtrar
     cols_folha = [nome_col, "tipoRecibo", "totalProventos", "totalLiquido"]
     cols_existentes = [c for c in cols_folha if c in df_d.columns]
-    
     df_view = df_d[cols_existentes].copy()
     
-    # Renomeia para exibição se todas estiverem lá
     mapeamento_folha = {
         nome_col: "Nome",
         "tipoRecibo": "Função/Recibo",
