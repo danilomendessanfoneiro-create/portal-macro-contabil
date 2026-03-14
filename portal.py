@@ -8,7 +8,7 @@ import re
 
 st.set_page_config(layout="wide", page_title="Portal BI - Macro Contábil")
 
-# ---------------- CONFIGURAÇÕES E CORES ----------------
+# ---------------- CORES ----------------
 colors = {
     "faturamento": "#38bdf8",
     "saidas": "#475569",
@@ -31,13 +31,9 @@ usuarios_db = {
 def format_br(valor):
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
-def format_pct(valor):
-    return f"{valor*100:.2f}%".replace(".", ",")
-
 def comp_br(c):
     return f"{c[4:6]}/{c[:4]}"
 
-# ---------------- LEITURA DE DADOS ----------------
 def carregar_dados(cnpj, comp):
     pasta = "dados_powerbi"
 
@@ -51,9 +47,8 @@ def carregar_dados(cnpj, comp):
                 res = js.get("result", js) if isinstance(js, dict) else js
                 if isinstance(res, list): data.extend(res)
                 elif isinstance(res, dict):
-                    if "documentos" in res: data.extend(res["documentos"])
-                    elif "recibos" in res: data.extend(res["recibos"])
-                    elif "totais" in res: data.extend(res["totais"])
+                    for k in ["documentos", "recibos", "totais"]:
+                        if k in res: data.extend(res[k]); break
                     else: data.append(res)
         df = pd.DataFrame(data)
         if not df.empty:
@@ -70,29 +65,26 @@ def carregar_dados(cnpj, comp):
 
     vals = {"fat":0,"ent":0,"fgts":0,"inss":0,"sn":0,"f_liq":0,"f_tot":0}
 
-    # FATURAMENTO E ENTRADAS
+    # Faturamento e Entradas
     if not df_f.empty:
         df_f["tipoMovimento"] = df_f["tipoMovimento"].astype(str).str.strip()
         vals["fat"] = df_f[df_f["tipoMovimento"].isin(["Prestado","Saída"])]["valorTotal"].sum()
         vals["ent"] = df_f[df_f["tipoMovimento"].isin(["Entrada","Tomado"])]["valorTotal"].sum()
     elif not df_t.empty:
         df_t["tipoMovimento"] = df_t["tipoMovimento"].astype(str).str.strip()
-        df_emit = df_t[df_t.get("situacao") == "Emitido"] if "situacao" in df_t.columns else df_t
-        vals["fat"] = df_emit[df_emit["tipoMovimento"].isin(["Saída","Prestado"])]["valorTotal"].sum()
-        vals["ent"] = df_emit[df_emit["tipoMovimento"].isin(["Entrada","Tomado"])]["valorTotal"].sum()
+        vals["fat"] = df_t[df_t["tipoMovimento"].isin(["Saída","Prestado"])]["valorTotal"].sum()
+        vals["ent"] = df_t[df_t["tipoMovimento"].isin(["Entrada","Tomado"])]["valorTotal"].sum()
 
-    # FOLHA
     if not df_d.empty:
         vals["f_liq"] = df_d.get("totalLiquido", 0).sum()
+        vals["f_tot"] = df_d.get("totalProventos", 0).sum()
         vals["fgts"] = df_d.get("valorFGTS", 0).sum()
         vals["inss"] = df_d.get("INSSSegurado", 0).sum()
-        vals["f_tot"] = df_d.get("totalProventos", 0).sum()
 
-    # SIMPLES
     if not df_a.empty:
         vals["sn"] = pd.to_numeric(df_a.iloc[0].get("TOTAL_APURADO", 0), errors="coerce")
 
-    vals["res"] = vals["fat"] - (vals["ent"] + vals["f_liq"] + vals["inss"] + vals["fgts"] + vals["sn"])
+    vals["res"] = vals["fat"] - (vals["ent"] + vals["f_tot"] + vals["sn"])
     return vals, df_f, df_d
 
 # ---------------- LOGIN ----------------
@@ -108,7 +100,6 @@ if not st.session_state.auth:
         else: st.error("Erro")
     st.stop()
 
-# ---------------- DASHBOARD ----------------
 user = st.session_state.user
 comps = ["202601", "202602", "202603", "202604", "202605"]
 
@@ -124,10 +115,9 @@ dados, df_f, df_d = carregar_dados(user["cnpj"], comp)
 st.title(user["nome"])
 st.subheader(f"Dashboard Financeiro - {comp_br(comp)}")
 
-# Métricas Principais
 c1,c2,c3,c4 = st.columns(4)
 c1.metric("Faturamento Total", format_br(dados["fat"]))
-c2.metric("Total Custos/Saídas", format_br(dados["ent"] + dados["f_tot"] + dados["sn"]))
+c2.metric("Total Saídas", format_br(dados["ent"] + dados["f_tot"] + dados["sn"]))
 c3.metric("Resultado Estimado", format_br(dados["res"]))
 c4.metric("Folha Líquida", format_br(dados["f_liq"]))
 
@@ -136,57 +126,70 @@ st.divider()
 col_graf1, col_graf2 = st.columns(2)
 
 with col_graf1:
-    st.write("### Faturamento vs Saídas")
-    df_comp = pd.DataFrame([
-        {"Tipo": "Faturamento", "Valor": dados["fat"]},
-        {"Tipo": "Saídas Geral", "Valor": dados["ent"] + dados["f_tot"] + dados["sn"]}
+    st.write("### Comparativo: Faturamento x Saídas")
+    df_bar = pd.DataFrame([
+        {"Legenda": "Faturamento", "Valor": dados["fat"]},
+        {"Legenda": "Saídas Geral", "Valor": dados["ent"] + dados["f_tot"] + dados["sn"]}
     ])
-    fig_bar = px.bar(df_comp, x="Tipo", y="Valor", color="Tipo", text_auto=".2s",
-                     color_discrete_map={"Faturamento": colors["faturamento"], "Saídas Geral": colors["saidas"]})
-    st.plotly_chart(fig_bar, use_container_width=True)
+    fig1 = px.bar(df_bar, x="Legenda", y="Valor", color="Legenda", text_auto=".2s",
+                  color_discrete_map={"Faturamento": colors["faturamento"], "Saídas Geral": colors["saidas"]})
+    st.plotly_chart(fig1, use_container_width=True)
 
 with col_graf2:
-    st.write("### Distribuição de Custos")
-    df_pizza = pd.DataFrame([
-        {"Cat": "Compras/Entradas", "V": dados["ent"]},
-        {"Cat": "Folha (Proventos)", "V": dados["f_tot"]},
-        {"Cat": "Impostos (Simples)", "V": dados["sn"]}
+    st.write("### Composição dos Custos (Proporção)")
+    df_pie = pd.DataFrame([
+        {"Categoria": "Compras", "V": dados["ent"]},
+        {"Categoria": "Folha", "V": dados["f_tot"]},
+        {"Categoria": "Impostos", "V": dados["sn"]}
     ])
-    fig_pie = px.pie(df_pizza, values="V", names="Cat", hole=.4,
-                     color_discrete_map={"Compras/Entradas": colors["compras"], "Folha (Proventos)": colors["folha"], "Impostos (Simples)": colors["impostos"]})
-    st.plotly_chart(fig_pie, use_container_width=True)
-
-# ---------------- TABELAS DETALHADAS ----------------
+    fig2 = px.pie(df_pie, values="V", names="Categoria", hole=.4,
+                  color_discrete_map={"Compras": colors["compras"], "Folha": colors["folha"], "Impostos": colors["impostos"]})
+    st.plotly_chart(fig2, use_container_width=True)
 
 st.divider()
-tab1, tab2 = st.tabs(["👥 Detalhe da Folha", "📦 Detalhe de Entradas/Fornecedores"])
+t1, t2 = st.tabs(["👥 Funcionários", "📦 Fornecedores"])
 
-with tab1:
+with t1:
     if not df_d.empty:
-        # Colunas conforme pedido: nomeFuncionario, cargo (ou tipo), totalProventos, totalLiquido
-        cols_folha = ["nomeFuncionario", "cargo", "totalProventos", "totalLiquido"]
-        # Fallback caso 'cargo' tenha outro nome no JSON (como 'funcao')
-        if "cargo" not in df_d.columns and "funcao" in df_d.columns:
-            df_d = df_d.rename(columns={"funcao": "cargo"})
+        # Padronização de nomes de colunas para evitar erros
+        mapa_folha = {
+            "nomeFuncionario": "Nome do Funcionário",
+            "cargo": "Função/Cargo",
+            "funcao": "Função/Cargo",
+            "totalProventos": "Salário Bruto",
+            "totalLiquido": "Salário Líquido"
+        }
+        df_folha_view = df_d.rename(columns=mapa_folha)
+        colunas_finais = ["Nome do Funcionário", "Função/Cargo", "Salário Bruto", "Salário Líquido"]
         
-        df_folha_view = df_d[[c for c in cols_folha if c in df_d.columns]].copy()
+        # Só exibe o que existir no arquivo
+        existentes = [c for c in colunas_finais if c in df_folha_view.columns]
+        df_final = df_folha_view[existentes].copy()
         
-        for c in ["totalProventos", "totalLiquido"]:
-            if c in df_folha_view.columns:
-                df_folha_view[c] = df_folha_view[c].apply(format_br)
+        for c in ["Salário Bruto", "Salário Líquido"]:
+            if c in df_final.columns:
+                df_final[c] = df_final[c].apply(format_br)
         
-        st.dataframe(df_folha_view, use_container_width=True, hide_index=True)
+        st.dataframe(df_final, use_container_width=True, hide_index=True)
     else:
-        st.warning("Dados de folha não encontrados.")
+        st.info("Sem dados de folha.")
 
-with tab2:
-    df_ent = df_f[df_f.get("tipoMovimento").isin(["Entrada", "Tomado"])] if not df_f.empty else pd.DataFrame()
-    if not df_ent.empty:
-        # Tabela expansível de fornecedores
-        for forn, group in df_ent.groupby("nomeEmitente"):
-            with st.expander(f"🏢 {forn} - Total: {format_br(group['valorTotal'].sum())}"):
-                detalhe = group[["numero", "valorTotal", "dataEmissao"]].copy()
-                detalhe["valorTotal"] = detalhe["valorTotal"].apply(format_br)
-                st.table(detalhe)
+with t2:
+    if not df_f.empty:
+        df_ent = df_f[df_f["tipoMovimento"].isin(["Entrada", "Tomado"])].copy()
+        
+        # Ajuste para o erro de KeyError: Tenta encontrar a coluna do fornecedor
+        col_forn = "nomeEmitente" if "nomeEmitente" in df_ent.columns else ("nome" if "nome" in df_ent.columns else None)
+        
+        if col_forn and not df_ent.empty:
+            for forn, group in df_ent.groupby(col_forn):
+                with st.expander(f"🏢 {forn} - Total: {format_br(group['valorTotal'].sum())}"):
+                    # Tabela interna simplificada
+                    det = group[["numero", "valorTotal", "dataEmissao"]].copy()
+                    det.columns = ["NF", "Valor", "Data"]
+                    det["Valor"] = det["Valor"].apply(format_br)
+                    st.table(det)
+        else:
+            st.info("Nenhum detalhe de fornecedor disponível.")
     else:
-        st.warning("Nenhuma nota de entrada detalhada para este mês.")
+        st.info("Sem notas de entrada.")
