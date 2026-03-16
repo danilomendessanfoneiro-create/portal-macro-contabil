@@ -222,9 +222,9 @@ with col1:
                     if not df_itens.empty:
                         df_itens.columns = [c.split(".")[-1] for c in df_itens.columns]
 
-                        # --- BUSCA INTELIGENTE DE COLUNAS ---
+                        # --- BUSCA INTELIGENTE DE COLUNAS (ATUALIZADO PARA SERVIÇOS) ---
                         # 1. Busca Descrição
-                        for c_desc in ["descricao", "xProd", "nome", "item", "servico", "descricaoProduto"]:
+                        for c_desc in ["descricao", "xProd", "nome", "item", "servico", "descricaoProduto", "descricaoServico", "nomeServico"]:
                             if c_desc in df_itens.columns:
                                 df_itens = df_itens.rename(columns={c_desc: "DESC_FINAL"})
                                 break
@@ -242,7 +242,7 @@ with col1:
                                 break
 
                         # 4. Busca Valor Total
-                        for c_tot in ["valorTotal", "vProd", "valor_total", "totalItem"]:
+                        for c_tot in ["valorTotal", "vProd", "valor_total", "totalItem", "valorItem"]:
                             if c_tot in df_itens.columns:
                                 df_itens = df_itens.rename(columns={c_tot: "VLR_TOT_FINAL"})
                                 break
