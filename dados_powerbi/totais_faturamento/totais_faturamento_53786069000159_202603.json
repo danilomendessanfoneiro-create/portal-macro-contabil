@@ -5,11 +5,11 @@
             {
                 "competencia": "03/2026",
                 "modelo": "CT-e",
-                "quantidade": 492,
+                "quantidade": 493,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
-                "valorTotal": 3996.87
+                "valorTotal": 4003.42
             },
             {
                 "competencia": "03/2026",
@@ -40,5 +40,5 @@
             }
         ]
     },
-    "_req_uuid": "e08bcec0-2221-11f1-aa5a-bb5fb827d902"
+    "_req_uuid": "8ba21670-2236-11f1-9c6c-f17f812faae0"
 }
