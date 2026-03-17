@@ -86,7 +86,7 @@
                     "desligamento": [
                         {
                             "motivoDoDesligamento": "Rescisão do contrato de trabalho por iniciativa do empregado",
-                            "ultimoDiaDeTrabalho": "2026-01-21T08:21:02"
+                            "ultimoDiaDeTrabalho": "2026-01-21T13:56:20"
                         }
                     ]
                 }
@@ -345,5 +345,5 @@
             ]
         ]
     },
-    "_req_uuid": "61bb7240-21f3-11f1-a231-139e2664e112"
+    "_req_uuid": "3885c7c0-2222-11f1-844c-89c548b065e8"
 }
