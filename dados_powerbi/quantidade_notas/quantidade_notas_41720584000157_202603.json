@@ -5,14 +5,14 @@
         "documento": "41.720.584/0001-57",
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 7,
+        "qtdEntradaTomado": 10,
         "qtdSaidaPrestado": 0,
         "razao": "HAMILTON ADRIANO QUINTINO 04805532629",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Simples Nacional",
         "statusApuracao": "Não iniciado",
-        "valorEntradaTomado": 4013.47,
+        "valorEntradaTomado": 6074.64,
         "valorSaidaPrestado": 0
     },
-    "_req_uuid": "bb87e5e0-2236-11f1-b757-2d0908b169cb"
+    "_req_uuid": "6f1e2420-22b4-11f1-aba6-5f03821db809"
 }
