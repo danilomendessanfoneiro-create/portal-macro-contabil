@@ -38,7 +38,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "1573266",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "HOSTGATOR BRASIL LTDA.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -83,7 +83,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "16209",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "BRITTO S SERVICE CENTER LTDA",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -94,5 +94,5 @@
             }
         ]
     },
-    "_req_uuid": "7d31f640-22b4-11f1-bfa1-57db568a81a1"
+    "_req_uuid": "9b19b670-2377-11f1-abc8-fdc2cc3c71cb"
 }

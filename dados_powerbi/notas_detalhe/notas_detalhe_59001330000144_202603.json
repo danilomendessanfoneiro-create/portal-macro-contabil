@@ -38,7 +38,7 @@
                 ],
                 "modelo": "NFS-e",
                 "numero": "86867",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "COMERCIAL AUTOMOTIVA S.A",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -83,7 +83,7 @@
                 ],
                 "modelo": "NFS-e",
                 "numero": "86868",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "COMERCIAL AUTOMOTIVA S.A",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -128,7 +128,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "4123",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "COMERCIAL AUTOMOTIVA S.A.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -205,7 +205,7 @@
                 ],
                 "modelo": "NF-e",
                 "numero": "000006105",
-                "origem": "Importação NF-e",
+                "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "POSTOS PMG LTDA",
                 "serie": "21",
                 "situacaoApuracao": "Documento Apurado",
@@ -338,7 +338,7 @@
                 ],
                 "modelo": "NF-e",
                 "numero": "000011116",
-                "origem": "Importação NF-e",
+                "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "AUTO POSTO CONTORNO LTDA",
                 "serie": "4",
                 "situacaoApuracao": "Documento Apurado",
@@ -348,7 +348,7 @@
                 "valorTotal": 2524.11
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "03/2026",
                 "dataEmissao": "13/03/2026",
@@ -383,7 +383,7 @@
                 ],
                 "modelo": "NFS-e",
                 "numero": "20566",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "V SOFTWARE TECNOLOGIA DA INFORMAÇÃO LTDA",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -394,5 +394,5 @@
             }
         ]
     },
-    "_req_uuid": "8592bcc0-22b4-11f1-b567-13784dc5364c"
+    "_req_uuid": "a30e9bc0-2377-11f1-b1f4-ab771e6a04d7"
 }

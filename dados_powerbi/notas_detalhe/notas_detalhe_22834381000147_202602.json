@@ -38,7 +38,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "266",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "MANOEL JOSE DOMINGOS 07069573693",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -83,7 +83,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "1334621",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "HOSTGATOR BRASIL LTDA.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -128,7 +128,7 @@
                 ],
                 "modelo": "NFS-e Nacional",
                 "numero": "16717106",
-                "origem": "Importação da Prefeitura",
+                "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "GOOGLE CLOUD BRASIL COMPUTACAO E SERVICOS DE DADOS LTDA.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
@@ -139,5 +139,5 @@
             }
         ]
     },
-    "_req_uuid": "7ad0fbd0-22b4-11f1-b7fa-d120606abbc5"
+    "_req_uuid": "991b7570-2377-11f1-83a4-eda003920f30"
 }
