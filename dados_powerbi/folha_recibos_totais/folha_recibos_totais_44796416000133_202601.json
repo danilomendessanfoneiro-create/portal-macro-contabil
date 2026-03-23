@@ -3,27 +3,27 @@
     "result": {
         "recibos": [
             {
-                "baseFGTS": 2953.99,
-                "baseINSS": 2953.99,
-                "baseIRPF": 2953.99,
+                "baseFGTS": 1625,
+                "baseINSS": 1625,
+                "baseIRPF": 1625,
                 "cpf": "059.476.326-67",
                 "dataPagamento": "30/01/2026",
-                "INSSSegurado": 243.06,
+                "INSSSegurado": 121.93,
                 "matricula": "0001",
                 "multiploVinculo": "Não",
                 "nome": "SIDNEI DA SILVA FERREIRA",
                 "tipoRecibo": "Mensalista e Horista",
-                "totalDescontos": 243.06,
+                "totalDescontos": 121.93,
                 "totalInformativos": 0,
-                "totalLiquido": 2710.93,
-                "totalProventos": 2953.99,
-                "valorFGTS": 236.31,
+                "totalLiquido": 1503.07,
+                "totalProventos": 1625,
+                "valorFGTS": 130,
                 "valorIRPF": 0
             }
         ],
         "status": "Aberto",
         "tipoFolha": "Mensal",
-        "valorTotal": 3278.91
+        "valorTotal": 1803.75
     },
-    "_req_uuid": "13d8d320-2495-11f1-9cbe-1bf7267177d0"
+    "_req_uuid": "6e75fe20-26a2-11f1-b212-a7b80f275588"
 }

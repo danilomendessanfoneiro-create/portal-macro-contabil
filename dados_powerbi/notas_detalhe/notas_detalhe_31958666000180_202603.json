@@ -430,7 +430,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de compra 4200063096",
+                        "descricaoServico": "Pedido de compra 4200062389",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -439,16 +439,16 @@
                         "irrfValor": 0,
                         "issAliquota": 3.84,
                         "issRetencao": false,
-                        "issValor": 76.8,
+                        "issValor": 99.84,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 2000
+                        "valorItem": 2600
                     }
                 ],
                 "modelo": "NFS-e Nacional",
-                "numero": "623",
+                "numero": "620",
                 "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
                 "serie": "",
@@ -456,52 +456,7 @@
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 2000
-            },
-            {
-                "alerta": false,
-                "alterado": false,
-                "competencia": "03/2026",
-                "dataEmissao": "16/03/2026",
-                "dataEscrituracao": "16/03/2026",
-                "documentoClienteFornecedor": "39.331.296/0002-40",
-                "erro": false,
-                "itens": [
-                    {
-                        "codigoServico": "14.13",
-                        "cofinsAliquota": 0,
-                        "cofinsRetencao": false,
-                        "cofinsValor": 0,
-                        "csllAliquota": 0,
-                        "csllRetencao": false,
-                        "csllValor": 0,
-                        "descricaoServico": "Pedido de compra 4200063089",
-                        "inssAliquota": 0,
-                        "inssRetencao": false,
-                        "inssValor": 0,
-                        "irrfAliquota": 0,
-                        "irrfRetencao": false,
-                        "irrfValor": 0,
-                        "issAliquota": 3.84,
-                        "issRetencao": false,
-                        "issValor": 25.84,
-                        "nomeServico": "Carpintaria e serralheria",
-                        "pisAliquota": 0,
-                        "pisRetencao": false,
-                        "pisValor": 0,
-                        "valorItem": 673
-                    }
-                ],
-                "modelo": "NFS-e Nacional",
-                "numero": "622",
-                "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
-                "serie": "",
-                "situacaoApuracao": "Documento Apurado",
-                "situacaoDocumento": "Emitido",
-                "tipoEmissao": "Própria",
-                "tipoMovimento": "Prestado",
-                "valorTotal": 673
+                "valorTotal": 2600
             },
             {
                 "alerta": false,
@@ -565,7 +520,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de compra 4200062389",
+                        "descricaoServico": "Pedido de compra 4200063089",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -574,16 +529,16 @@
                         "irrfValor": 0,
                         "issAliquota": 3.84,
                         "issRetencao": false,
-                        "issValor": 99.84,
+                        "issValor": 25.84,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 2600
+                        "valorItem": 673
                     }
                 ],
                 "modelo": "NFS-e Nacional",
-                "numero": "620",
+                "numero": "622",
                 "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
                 "serie": "",
@@ -591,7 +546,52 @@
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 2600
+                "valorTotal": 673
+            },
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "16/03/2026",
+                "dataEscrituracao": "16/03/2026",
+                "documentoClienteFornecedor": "39.331.296/0002-40",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "14.13",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Pedido de compra 4200063096",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 3.84,
+                        "issRetencao": false,
+                        "issValor": 76.8,
+                        "nomeServico": "Carpintaria e serralheria",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 2000
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "623",
+                "origem": "Portal da prefeitura (auto)",
+                "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 2000
             },
             {
                 "alerta": false,
@@ -685,5 +685,5 @@
             }
         ]
     },
-    "_req_uuid": "ed5cfcd0-2494-11f1-99a0-1ba2fd586cad"
+    "_req_uuid": "442b4580-26a2-11f1-8468-8df552be7a86"
 }
