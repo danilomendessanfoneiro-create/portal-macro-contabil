@@ -5,6 +5,7 @@
             {
                 "baseFGTS": 0,
                 "baseINSS": 1621,
+                "baseINSSPatronal": 1621,
                 "baseIRPF": 1621,
                 "cpf": "092.097.146-60",
                 "dataPagamento": "30/01/2026",
@@ -23,6 +24,7 @@
             {
                 "baseFGTS": 76.16,
                 "baseINSS": 76.16,
+                "baseINSSPatronal": 76.16,
                 "baseIRPF": 76.16,
                 "cpf": "948.297.306-25",
                 "dataPagamento": "30/01/2026",
@@ -41,6 +43,7 @@
             {
                 "baseFGTS": 1274.03,
                 "baseINSS": 1274.03,
+                "baseINSSPatronal": 1274.03,
                 "baseIRPF": 1274.03,
                 "cpf": "099.354.706-01",
                 "dataPagamento": "30/01/2026",
@@ -59,6 +62,7 @@
             {
                 "baseFGTS": 2682.73,
                 "baseINSS": 2682.73,
+                "baseINSSPatronal": 2682.73,
                 "baseIRPF": 2682.73,
                 "cpf": "122.492.266-28",
                 "dataPagamento": "30/01/2026",
@@ -79,5 +83,5 @@
         "tipoFolha": "Mensal",
         "valorTotal": 6906.93
     },
-    "_req_uuid": "7fe2e650-26a2-11f1-87de-b1db33c08faa"
+    "_req_uuid": "41b1b1d0-26d5-11f1-a5ad-37e74a14be21"
 }

@@ -5,6 +5,7 @@
             {
                 "baseFGTS": 0,
                 "baseINSS": 1621,
+                "baseINSSPatronal": 1621,
                 "baseIRPF": 1621,
                 "cpf": "092.366.466-11",
                 "dataPagamento": "27/02/2026",
@@ -25,5 +26,5 @@
         "tipoFolha": "Mensal",
         "valorTotal": 1621
     },
-    "_req_uuid": "7b431f70-26a2-11f1-8c52-03807d6bf12c"
+    "_req_uuid": "3d265d50-26d5-11f1-bc2c-b9785346c0bd"
 }
