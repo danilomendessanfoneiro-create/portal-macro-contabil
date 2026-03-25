@@ -27,6 +27,18 @@
         "PIS_BASE_CALCULO": null,
         "PIS_MES_ANTERIOR": null,
         "RETORNO": true,
+        "RET_PRESTADO_COFINS": null,
+        "RET_PRESTADO_CSLL": null,
+        "RET_PRESTADO_INSS": null,
+        "RET_PRESTADO_IRRF": null,
+        "RET_PRESTADO_ISS": null,
+        "RET_PRESTADO_PIS": null,
+        "RET_TOMADO_COFINS": null,
+        "RET_TOMADO_CSLL": null,
+        "RET_TOMADO_INSS": null,
+        "RET_TOMADO_IRRF": null,
+        "RET_TOMADO_ISS": null,
+        "RET_TOMADO_PIS": null,
         "SN_FATORR": 0,
         "SN_ICMS_FIXO": 0,
         "SN_ISS_FIXO": 0,
@@ -45,5 +57,5 @@
         "TOTAL_MES_ANTERIOR": 0,
         "TOTAL_PROXIMO_MES": 0
     },
-    "_req_uuid": "eda26080-26d4-11f1-9b1d-f5d9057eb678"
+    "_req_uuid": "a53fcb40-2867-11f1-8acc-612e14ce6631"
 }
