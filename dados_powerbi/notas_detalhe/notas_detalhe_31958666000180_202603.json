@@ -682,8 +682,53 @@
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
                 "valorTotal": 1020
+            },
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "27/03/2026",
+                "dataEscrituracao": "27/03/2026",
+                "documentoClienteFornecedor": "58.295.213/0021-11",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "14.13",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "ORDER REFERENCE CODE6100028604Terms of deliveryFCA Varginha",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 3.84,
+                        "issRetencao": true,
+                        "issValor": 103.68,
+                        "nomeServico": "Carpintaria e serralheria",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 2700
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "626",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "PHILIPS MEDICAL SYSTEMS LTDA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Cancelado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 2700
             }
         ]
     },
-    "_req_uuid": "10937710-29c2-11f1-bdd8-654eb76c9cbe"
+    "_req_uuid": "e2181140-2c2b-11f1-90e3-79e7000d68cc"
 }
