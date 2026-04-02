@@ -5,14 +5,14 @@
         "documento": "22.834.381/0001-47",
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 4,
+        "qtdEntradaTomado": 5,
         "qtdSaidaPrestado": 0,
         "razao": "SOLUTION DO BRASIL DISTRIBUIDORA LTDA",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Regime Normal - Lucro Presumido",
         "statusApuracao": "Não iniciado",
-        "valorEntradaTomado": 280.7,
+        "valorEntradaTomado": 299.79,
         "valorSaidaPrestado": 0
     },
-    "_req_uuid": "7ad6a0a0-2db6-11f1-b82d-8d9bc70eed48"
+    "_req_uuid": "05d6a280-2e80-11f1-862d-7927ae4dd8a2"
 }

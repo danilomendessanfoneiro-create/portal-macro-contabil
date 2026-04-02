@@ -1,10 +1,68 @@
 {
     "code": "200",
     "result": {
-        "recibos": {},
-        "status": {},
-        "tipoFolha": {},
-        "valorTotal": {}
+        "recibos": [
+            {
+                "baseFGTS": 2664.02,
+                "baseINSS": 2664.02,
+                "baseINSSPatronal": 2664.02,
+                "baseIRPF": 2664.02,
+                "cpf": "035.749.236-60",
+                "dataPagamento": "30/03/2026",
+                "INSSSegurado": 215.44,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "RICARDO SANTANA",
+                "tipoRecibo": "Mensalista e Horista",
+                "totalDescontos": 215.44,
+                "totalInformativos": 0,
+                "totalLiquido": 3248.58,
+                "totalProventos": 3464.02,
+                "valorFGTS": 213.12,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseINSSPatronal": 1621,
+                "baseIRPF": 1621,
+                "cpf": "013.924.426-30",
+                "dataPagamento": "30/03/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "2",
+                "multiploVinculo": "Não",
+                "nome": "CRISTIANE BARBARA TAVARES",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            },
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseINSSPatronal": 1621,
+                "baseIRPF": 1621,
+                "cpf": "009.946.566-37",
+                "dataPagamento": "30/03/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "3",
+                "multiploVinculo": "Não",
+                "nome": "ALESSANDRA MIGUEL PAULINO",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Fechado",
+        "tipoFolha": "Mensal",
+        "valorTotal": 6919.14
     },
-    "_req_uuid": "b285b180-2db6-11f1-a69c-936a589981f5"
+    "_req_uuid": "4179f800-2e80-11f1-a27b-eba80e3e6a1d"
 }

@@ -1,12 +1,12 @@
 {
     "code": "200",
     "result": {
-        "APURACAO_FECHAMENTO_DATA": 0,
-        "APURACAO_FECHAMENTO_HORA": "        ",
-        "APURACAO_FECHAMENTO_USUARIO": "",
+        "APURACAO_FECHAMENTO_DATA": "01/04/2026",
+        "APURACAO_FECHAMENTO_HORA": "08:01:35",
+        "APURACAO_FECHAMENTO_USUARIO": "Danilo Mendes",
         "APURACAO_REGIME_APURACAO": "Regime de Competência",
         "APURACAO_REGIME_TRIBUTARIO": "Simples Nacional",
-        "APURACAO_STATUS": "A",
+        "APURACAO_STATUS": "F",
         "COFINS_APURADO": null,
         "COFINS_BASE_CALCULO": null,
         "COFINS_MES_ANTERIOR": null,
@@ -51,11 +51,11 @@
         "SN_RBT12_MERC_EXTERNO": 0,
         "SN_RBT12_MERC_INTERNO": 90835,
         "SN_VFOLHA": 48526.23,
-        "STATUS": "A",
+        "STATUS": "F",
         "TOTAL_APURADO": 789.01,
         "TOTAL_BASE_CALCULO": 0,
         "TOTAL_MES_ANTERIOR": 0,
         "TOTAL_PROXIMO_MES": 0
     },
-    "_req_uuid": "814f1f20-2db6-11f1-a69c-936a589981f5"
+    "_req_uuid": "0db5b5e0-2e80-11f1-9c1f-2566388ef379"
 }
