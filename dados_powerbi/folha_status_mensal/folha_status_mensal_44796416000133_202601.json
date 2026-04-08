@@ -2,13 +2,13 @@
     "code": "200",
     "result": {
         "statusDaFolha": {
-            "competencia": {},
-            "status": {},
-            "statusData": {},
-            "statusHora": {},
-            "tipoFolha": {},
-            "usuario": {}
+            "competencia": "202601",
+            "status": "Fechada",
+            "statusData": "08/04/2026",
+            "statusHora": "09:48:20",
+            "tipoFolha": "Mensal",
+            "usuario": "Danilo Mendes"
         }
     },
-    "_req_uuid": "7bd618d0-32a4-11f1-86ad-111a9b35d534"
+    "_req_uuid": "86018e50-3382-11f1-8829-85a21ce5cf9a"
 }
