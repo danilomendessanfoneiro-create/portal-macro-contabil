@@ -25,7 +25,8 @@ usuarios_db = {
     "HamiltonAdriano": {"senha": "ABCdef123!", "cnpj": "00000000000000", "nome": "Hamilton Adriano"},
     "Paulaes": {"senha": "ABCdef123!", "cnpj": "21805265000137", "nome": "Paula ES"},
     "Solution": {"senha": "ABCdef123!", "cnpj": "22834381000147", "nome": "Solution"},
-    "Tptransporte": {"senha": "ABCdef123!", "cnpj": "59001330000144", "nome": "TP Transporte"}
+    "Tptransporte": {"senha": "ABCdef123!", "cnpj": "59001330000144", "nome": "TP Transporte"},
+    "Annenery": {"senha": "ABCdef123!", "cnpj": "00000000000000", "nome": "Annenery"}
 }
 
 # ---------------- FORMATADORES ----------------

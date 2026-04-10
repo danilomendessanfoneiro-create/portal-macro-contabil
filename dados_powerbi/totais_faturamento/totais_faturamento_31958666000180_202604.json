@@ -1,0 +1,26 @@
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "04/2026",
+                "modelo": "NFS-e",
+                "quantidade": 4,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 8400
+            },
+            {
+                "competencia": "04/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 2700
+            }
+        ]
+    },
+    "_req_uuid": "5ebedc10-3523-11f1-9058-a342cf1632df"
+}

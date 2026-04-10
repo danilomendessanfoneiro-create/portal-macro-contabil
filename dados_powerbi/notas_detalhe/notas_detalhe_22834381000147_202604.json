@@ -1,0 +1,53 @@
+{
+    "code": "200",
+    "result": {
+        "documentos": [
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "04/2026",
+                "dataEmissao": "01/04/2026",
+                "dataEscrituracao": "02/04/2026",
+                "documentoClienteFornecedor": "37.022.177/0001-07",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "15.06",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Prestação de serviço e coleta",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 0,
+                        "issRetencao": false,
+                        "issValor": 0,
+                        "nomeServico": "Emissão, reemissão de avisos",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 50
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "277",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "MANOEL JOSE DOMINGOS 07069573693",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 50
+            }
+        ]
+    },
+    "_req_uuid": "7cffea70-3523-11f1-992a-1539ea93e333"
+}
