@@ -39,7 +39,7 @@
         "RET_TOMADO_IRRF": null,
         "RET_TOMADO_ISS": null,
         "RET_TOMADO_PIS": null,
-        "SN_FATORR": 0,
+        "SN_FATORR": 1,
         "SN_ICMS_FIXO": 0,
         "SN_ISS_FIXO": 0,
         "SN_PA_MERC_EXTERNO_CAIXA": 0,
@@ -50,12 +50,12 @@
         "SN_RBA_MERC_INTERNO": 0,
         "SN_RBT12_MERC_EXTERNO": 0,
         "SN_RBT12_MERC_INTERNO": 0,
-        "SN_VFOLHA": 0,
+        "SN_VFOLHA": 1621,
         "STATUS": "A",
         "TOTAL_APURADO": 0,
         "TOTAL_BASE_CALCULO": 0,
         "TOTAL_MES_ANTERIOR": 0,
         "TOTAL_PROXIMO_MES": 0
     },
-    "_req_uuid": "45ce9510-3523-11f1-a355-a9a802a7d2e8"
+    "_req_uuid": "b8a27540-3526-11f1-b7bc-0767d5ee93d0"
 }

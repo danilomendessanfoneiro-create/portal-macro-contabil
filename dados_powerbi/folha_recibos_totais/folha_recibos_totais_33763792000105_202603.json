@@ -1,10 +1,30 @@
 {
     "code": "200",
     "result": {
-        "recibos": {},
-        "status": {},
-        "tipoFolha": {},
-        "valorTotal": {}
+        "recibos": [
+            {
+                "baseFGTS": 0,
+                "baseINSS": 1621,
+                "baseINSSPatronal": 1621,
+                "baseIRPF": 1621,
+                "cpf": "116.982.776-44",
+                "dataPagamento": "30/03/2026",
+                "INSSSegurado": 178.31,
+                "matricula": "1",
+                "multiploVinculo": "Não",
+                "nome": "ANNE CAROLINE DE LIMA CLAUDIANO NERY",
+                "tipoRecibo": "Pró-laborista",
+                "totalDescontos": 178.31,
+                "totalInformativos": 0,
+                "totalLiquido": 1442.69,
+                "totalProventos": 1621,
+                "valorFGTS": 0,
+                "valorIRPF": 0
+            }
+        ],
+        "status": "Aberto",
+        "tipoFolha": "Mensal",
+        "valorTotal": 1621
     },
-    "_req_uuid": "9bbe6630-3523-11f1-9058-a342cf1632df"
+    "_req_uuid": "115fbe40-3527-11f1-8d0c-2944c8f931de"
 }

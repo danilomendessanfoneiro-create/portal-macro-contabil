@@ -10,8 +10,17 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 6614.3
+            },
+            {
+                "competencia": "04/2026",
+                "modelo": "NFC-e",
+                "quantidade": 3,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 163
             }
         ]
     },
-    "_req_uuid": "53b786a0-3523-11f1-8d0c-2944c8f931de"
+    "_req_uuid": "c5e67440-3526-11f1-8d55-5bb31fefff30"
 }
