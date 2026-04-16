@@ -6,13 +6,13 @@
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
         "qtdEntradaTomado": 0,
-        "qtdSaidaPrestado": 0,
+        "qtdSaidaPrestado": 2,
         "razao": "ANNE CAROLINE DE LIMA CLAUDIANO NERY LTDA",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Simples Nacional",
-        "statusApuracao": "Andamento",
+        "statusApuracao": "Finalizado",
         "valorEntradaTomado": 0,
-        "valorSaidaPrestado": 0
+        "valorSaidaPrestado": 20611.54
     },
-    "_req_uuid": "0a03d530-38b7-11f1-92b4-412fa1abb9fe"
+    "_req_uuid": "3239c540-3980-11f1-bbaa-9f726bb8346f"
 }

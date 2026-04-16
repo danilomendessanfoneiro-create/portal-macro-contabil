@@ -5,11 +5,11 @@
             {
                 "competencia": "04/2026",
                 "modelo": "NF-e",
-                "quantidade": 32,
+                "quantidade": 35,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
-                "valorTotal": 8679.87
+                "valorTotal": 9398.92
             },
             {
                 "competencia": "04/2026",
@@ -19,8 +19,17 @@
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Saída",
                 "valorTotal": 163
+            },
+            {
+                "competencia": "04/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 55
             }
         ]
     },
-    "_req_uuid": "1e4c8d20-38b7-11f1-a5e9-a70aa0a1fcae"
+    "_req_uuid": "46aa0260-3980-11f1-8008-8d30a41ca4dc"
 }

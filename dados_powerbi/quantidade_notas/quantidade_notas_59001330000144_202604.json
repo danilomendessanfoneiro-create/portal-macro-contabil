@@ -5,14 +5,14 @@
         "documento": "59.001.330/0001-44",
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 2,
+        "qtdEntradaTomado": 3,
         "qtdSaidaPrestado": 0,
         "razao": "TP TRANSPORTES TAVARES PAULINO LTDA",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Simples Nacional",
-        "statusApuracao": "Não iniciado",
-        "valorEntradaTomado": 2739.23,
+        "statusApuracao": "Andamento",
+        "valorEntradaTomado": 2983.11,
         "valorSaidaPrestado": 0
     },
-    "_req_uuid": "55938d60-38b7-11f1-89f8-5f381cace7ba"
+    "_req_uuid": "76405240-3980-11f1-a5cf-e528b145c79b"
 }

@@ -1,7 +1,22 @@
 {
     "code": "200",
     "result": {
-        "erro": "Para gerar as alíquotas da competência 02/2026 é necessário que a competência 01/2026 esteja finalizada."
+        "iss": [
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 2.01,
+                "CODIGO_FEDERAL": "6.02      ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Esteticistas, tratamento de pele        ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 2.01,
+                "CODIGO_FEDERAL": "6.02      ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Esteticistas, tratamento de pele        ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
+            }
+        ]
     },
-    "_req_uuid": "0bf43380-38b7-11f1-8207-af443d0e0159"
+    "_req_uuid": "34000650-3980-11f1-baae-41c921bec355"
 }

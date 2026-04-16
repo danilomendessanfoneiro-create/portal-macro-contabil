@@ -46,8 +46,53 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
                 "valorTotal": 50
+            },
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "04/2026",
+                "dataEmissao": "15/04/2026",
+                "dataEscrituracao": "15/04/2026",
+                "documentoClienteFornecedor": "37.022.177/0001-07",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "15.06",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Prestação de serviço coleta e Entrega.",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 0,
+                        "issRetencao": false,
+                        "issValor": 0,
+                        "nomeServico": "Emissão, reemissão de avisos",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 30
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "281",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "MANOEL JOSE DOMINGOS 07069573693",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 30
             }
         ]
     },
-    "_req_uuid": "484d4470-38b7-11f1-94ea-7509f93246d4"
+    "_req_uuid": "6af9d0f0-3980-11f1-baae-41c921bec355"
 }
