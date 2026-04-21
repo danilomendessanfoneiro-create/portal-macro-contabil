@@ -10,8 +10,17 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
                 "valorTotal": 135
+            },
+            {
+                "competencia": "04/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 8887.79
             }
         ]
     },
-    "_req_uuid": "fa15d4b0-398e-11f1-8ea8-83fb25b15548"
+    "_req_uuid": "bf8bc0a0-3d6e-11f1-a6fb-9309a6b9acb3"
 }

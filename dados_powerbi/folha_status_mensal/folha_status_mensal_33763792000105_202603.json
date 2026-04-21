@@ -3,12 +3,12 @@
     "result": {
         "statusDaFolha": {
             "competencia": "202603",
-            "status": "Aberta",
-            "statusData": "15/04/2026",
-            "statusHora": "23:26:50",
+            "status": "Fechada",
+            "statusData": "16/04/2026",
+            "statusHora": "15:50:51",
             "tipoFolha": "Mensal",
             "usuario": "Danilo Mendes"
         }
     },
-    "_req_uuid": "9d8ee410-398f-11f1-bc5c-69da670ef918"
+    "_req_uuid": "1a65f630-3d6f-11f1-a432-1d17dcb4aebb"
 }

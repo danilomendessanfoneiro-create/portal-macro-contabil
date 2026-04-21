@@ -17,13 +17,6 @@
                 "DESCRICAO_INTERNO": "                                                                                                    "
             },
             {
-                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
-                "CODIGO_FEDERAL": "14.13     ",
-                "CODIGO_INTERNO": "                    ",
-                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
-                "DESCRICAO_INTERNO": "                                                                                                    "
-            },
-            {
                 "ALIQUOTA_ISS_PROXIMOMES": 4.08,
                 "CODIGO_FEDERAL": "7.10      ",
                 "CODIGO_INTERNO": "                    ",
@@ -127,8 +120,15 @@
                 "CODIGO_INTERNO": "                    ",
                 "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
                 "DESCRICAO_INTERNO": "                                                                                                    "
+            },
+            {
+                "ALIQUOTA_ISS_PROXIMOMES": 4.09,
+                "CODIGO_FEDERAL": "14.13     ",
+                "CODIGO_INTERNO": "                    ",
+                "DESCRICAO_FEDERAL": "Carpintaria e serralheria               ",
+                "DESCRICAO_INTERNO": "                                                                                                    "
             }
         ]
     },
-    "_req_uuid": "1b2b38c0-398f-11f1-8ea8-83fb25b15548"
+    "_req_uuid": "d42b4b20-3d6e-11f1-91eb-7fb60154ceb6"
 }

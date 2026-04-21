@@ -3,7 +3,7 @@
     "result": {
         "documentos": [
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "04/2026",
                 "dataEmissao": "09/04/2026",
@@ -46,8 +46,53 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
                 "valorTotal": 135
+            },
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "04/2026",
+                "dataEmissao": "16/04/2026",
+                "dataEscrituracao": "16/04/2026",
+                "documentoClienteFornecedor": "50.354.560/0001-12",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "6.02",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Prestacao de servico referente ao periodo de 31.03 a 14.04.2026",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 2.01,
+                        "issRetencao": false,
+                        "issValor": 178.64,
+                        "nomeServico": "Esteticistas, tratamento de pele",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 8887.79
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "72",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "JRBP ESTETICA LTDA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 8887.79
             }
         ]
     },
-    "_req_uuid": "f96c9c60-398e-11f1-970d-19181fd966db"
+    "_req_uuid": "bf37fb50-3d6e-11f1-ad79-cb14044d1b59"
 }
