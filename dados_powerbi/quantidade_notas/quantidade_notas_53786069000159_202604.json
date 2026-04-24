@@ -5,14 +5,14 @@
         "documento": "53.786.069/0001-59",
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 514,
-        "qtdSaidaPrestado": 61,
+        "qtdEntradaTomado": 611,
+        "qtdSaidaPrestado": 70,
         "razao": "53.786.069 TAMARA DE PAULA LIMA",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Simples Nacional",
         "statusApuracao": "Andamento",
-        "valorEntradaTomado": 21815.71,
-        "valorSaidaPrestado": 3595.29
+        "valorEntradaTomado": 22579.93,
+        "valorSaidaPrestado": 4227.02
     },
-    "_req_uuid": "b8737fb0-3d6e-11f1-bc36-77afa5e37a7f"
+    "_req_uuid": "f3fd2450-402f-11f1-a533-5f2ea316a0c2"
 }

@@ -1,7 +1,148 @@
 {
     "code": "200",
     "result": {
-        "iss": []
+        "aliquotas": [
+            {
+                "ALIQUOTA_COFINS": 0.51,
+                "ALIQUOTA_CPP": 1.66,
+                "ALIQUOTA_CSLL": 0.14,
+                "ALIQUOTA_EFETIVA": 0.04,
+                "ALIQUOTA_ICMS": 1.36,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.22,
+                "ALIQUOTA_ISS": 0,
+                "ALIQUOTA_NOMINAL": 0.04,
+                "ALIQUOTA_PIS": 0.11,
+                "ANEXO": 1,
+                "MERCADO": "I"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.52,
+                "ALIQUOTA_CPP": 1.69,
+                "ALIQUOTA_CSLL": 0.16,
+                "ALIQUOTA_EFETIVA": 0.045,
+                "ALIQUOTA_ICMS": 1.44,
+                "ALIQUOTA_IPI": 0.34,
+                "ALIQUOTA_IRPJ": 0.25,
+                "ALIQUOTA_ISS": 0,
+                "ALIQUOTA_NOMINAL": 0.045,
+                "ALIQUOTA_PIS": 0.11,
+                "ANEXO": 2,
+                "MERCADO": "I"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.77,
+                "ALIQUOTA_CPP": 2.6,
+                "ALIQUOTA_CSLL": 0.21,
+                "ALIQUOTA_EFETIVA": 0.06,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.24,
+                "ALIQUOTA_ISS": 2.01,
+                "ALIQUOTA_NOMINAL": 0.06,
+                "ALIQUOTA_PIS": 0.17,
+                "ANEXO": 3,
+                "MERCADO": "I"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.8,
+                "ALIQUOTA_CPP": 0,
+                "ALIQUOTA_CSLL": 0.68,
+                "ALIQUOTA_EFETIVA": 0.045,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.85,
+                "ALIQUOTA_ISS": 2,
+                "ALIQUOTA_NOMINAL": 0.045,
+                "ALIQUOTA_PIS": 0.17,
+                "ANEXO": 4,
+                "MERCADO": "I"
+            },
+            {
+                "ALIQUOTA_COFINS": 2.19,
+                "ALIQUOTA_CPP": 4.47,
+                "ALIQUOTA_CSLL": 2.33,
+                "ALIQUOTA_EFETIVA": 0.155,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 3.88,
+                "ALIQUOTA_ISS": 2.17,
+                "ALIQUOTA_NOMINAL": 0.155,
+                "ALIQUOTA_PIS": 0.47,
+                "ANEXO": 5,
+                "MERCADO": "I"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.51,
+                "ALIQUOTA_CPP": 1.66,
+                "ALIQUOTA_CSLL": 0.14,
+                "ALIQUOTA_EFETIVA": 0.04,
+                "ALIQUOTA_ICMS": 1.36,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.22,
+                "ALIQUOTA_ISS": 0,
+                "ALIQUOTA_NOMINAL": 0.04,
+                "ALIQUOTA_PIS": 0.11,
+                "ANEXO": 1,
+                "MERCADO": "E"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.52,
+                "ALIQUOTA_CPP": 1.69,
+                "ALIQUOTA_CSLL": 0.16,
+                "ALIQUOTA_EFETIVA": 0.045,
+                "ALIQUOTA_ICMS": 1.44,
+                "ALIQUOTA_IPI": 0.34,
+                "ALIQUOTA_IRPJ": 0.25,
+                "ALIQUOTA_ISS": 0,
+                "ALIQUOTA_NOMINAL": 0.045,
+                "ALIQUOTA_PIS": 0.11,
+                "ANEXO": 2,
+                "MERCADO": "E"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.77,
+                "ALIQUOTA_CPP": 2.6,
+                "ALIQUOTA_CSLL": 0.21,
+                "ALIQUOTA_EFETIVA": 0.06,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.24,
+                "ALIQUOTA_ISS": 2.01,
+                "ALIQUOTA_NOMINAL": 0.06,
+                "ALIQUOTA_PIS": 0.17,
+                "ANEXO": 3,
+                "MERCADO": "E"
+            },
+            {
+                "ALIQUOTA_COFINS": 0.8,
+                "ALIQUOTA_CPP": 0,
+                "ALIQUOTA_CSLL": 0.68,
+                "ALIQUOTA_EFETIVA": 0.045,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 0.85,
+                "ALIQUOTA_ISS": 2,
+                "ALIQUOTA_NOMINAL": 0.045,
+                "ALIQUOTA_PIS": 0.17,
+                "ANEXO": 4,
+                "MERCADO": "E"
+            },
+            {
+                "ALIQUOTA_COFINS": 2.19,
+                "ALIQUOTA_CPP": 4.47,
+                "ALIQUOTA_CSLL": 2.33,
+                "ALIQUOTA_EFETIVA": 0.155,
+                "ALIQUOTA_ICMS": 0,
+                "ALIQUOTA_IPI": 0,
+                "ALIQUOTA_IRPJ": 3.88,
+                "ALIQUOTA_ISS": 2.17,
+                "ALIQUOTA_NOMINAL": 0.155,
+                "ALIQUOTA_PIS": 0.47,
+                "ANEXO": 5,
+                "MERCADO": "E"
+            }
+        ]
     },
-    "_req_uuid": "85386ac0-3d6e-11f1-bd81-b7fdab8414f8"
+    "_req_uuid": "bb29dec0-402f-11f1-b315-5376543a36a8"
 }

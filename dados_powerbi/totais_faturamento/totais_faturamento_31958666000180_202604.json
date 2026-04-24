@@ -14,11 +14,20 @@
             {
                 "competencia": "04/2026",
                 "modelo": "NFS-e",
-                "quantidade": 5,
+                "quantidade": 1,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 11385
+            },
+            {
+                "competencia": "04/2026",
+                "modelo": "NFS-e",
+                "quantidade": 8,
                 "situacao": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 8700
+                "valorTotal": 33325
             },
             {
                 "competencia": "04/2026",
@@ -31,5 +40,5 @@
             }
         ]
     },
-    "_req_uuid": "dabc81c0-3d6e-11f1-bf90-e9d621e9e451"
+    "_req_uuid": "24cc1b40-4030-11f1-9daa-a9d45897186e"
 }
