@@ -6,13 +6,13 @@
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
         "qtdEntradaTomado": 0,
-        "qtdSaidaPrestado": 2,
+        "qtdSaidaPrestado": 3,
         "razao": "44.796.416 DANILO MENDES",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "MEI",
-        "statusApuracao": "Pendente",
+        "statusApuracao": "Andamento",
         "valorEntradaTomado": 0,
-        "valorSaidaPrestado": 2542.3
+        "valorSaidaPrestado": 3242.3
     },
-    "_req_uuid": "51e31610-425b-11f1-830a-c37178b1d56a"
+    "_req_uuid": "64ab4fa0-42f7-11f1-a8b3-03f526b13aac"
 }
