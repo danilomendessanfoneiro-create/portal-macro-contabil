@@ -6,6 +6,51 @@
                 "alerta": false,
                 "alterado": false,
                 "competencia": "04/2026",
+                "dataEmissao": "29/04/2026",
+                "dataEscrituracao": "30/04/2026",
+                "documentoClienteFornecedor": "47.421.935/0001-05",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "8.02",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Mensalidade referente as aulas de musica  competencia abril/2026",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 2.01,
+                        "issRetencao": false,
+                        "issValor": 5.81,
+                        "nomeServico": "Instrução, treinamento, orientação",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 289
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "3748",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "ARPEJO CENTRO DE MUSICA E ARTE LTDA.",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 289
+            },
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "04/2026",
                 "dataEmissao": "16/04/2026",
                 "dataEscrituracao": "16/04/2026",
                 "documentoClienteFornecedor": "000.000.000-00",
@@ -139,5 +184,5 @@
             }
         ]
     },
-    "_req_uuid": "633662e0-42f7-11f1-b01c-55772ae91e58"
+    "_req_uuid": "b7ea2170-47a0-11f1-8368-4f0d2a439250"
 }

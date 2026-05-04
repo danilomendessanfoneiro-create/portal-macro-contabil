@@ -14,20 +14,20 @@
             {
                 "competencia": "04/2026",
                 "modelo": "NF-e",
-                "quantidade": 61,
+                "quantidade": 67,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
-                "valorTotal": 16557.41
+                "valorTotal": 18558.77
             },
             {
                 "competencia": "04/2026",
                 "modelo": "NFC-e",
-                "quantidade": 69,
+                "quantidade": 116,
                 "situacao": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Saída",
-                "valorTotal": 9375.6
+                "valorTotal": 17072.9
             },
             {
                 "competencia": "04/2026",
@@ -40,5 +40,5 @@
             }
         ]
     },
-    "_req_uuid": "cd641680-42f7-11f1-a608-15809454fe64"
+    "_req_uuid": "1a47dce0-47a1-11f1-9b10-5b906889b8e5"
 }

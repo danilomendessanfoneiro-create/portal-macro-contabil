@@ -10,7 +10,7 @@
                     "contratos": [
                         {
                             "contrato": {
-                                "admissao": "2023-08-01T08:48:04",
+                                "admissao": "2023-08-01T07:09:49",
                                 "cargo": "ADMINISTRADOR",
                                 "categoria": 723,
                                 "jornada": "",
@@ -22,7 +22,7 @@
                         }
                     ],
                     "cpf": "092.366.466-11",
-                    "dataNascimento": "1987-03-10T08:48:04",
+                    "dataNascimento": "1987-03-10T07:09:49",
                     "nomeCompleto": "EDIR SABINO DOS REIS",
                     "pis": "           ",
                     "sexo": "Masculino"
@@ -30,5 +30,5 @@
             }
         ]
     },
-    "_req_uuid": "1d962da0-42f8-11f1-8812-0bb9526b42a1"
+    "_req_uuid": "62471b50-47a1-11f1-9b10-5b906889b8e5"
 }

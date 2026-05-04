@@ -1,17 +1,1 @@
-{
-    "code": "200",
-    "result": {
-        "totais": [
-            {
-                "competencia": "04/2026",
-                "modelo": "NF-e",
-                "quantidade": 11,
-                "situacao": "Emitido",
-                "tipoEmissao": "Terceiros",
-                "tipoMovimento": "Entrada",
-                "valorTotal": 7153.86
-            }
-        ]
-    },
-    "_req_uuid": "e7e69640-42f7-11f1-8311-9d5e080ac5f4"
-}
+"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
