@@ -1,0 +1,44 @@
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "05/2026",
+                "modelo": "CT-e",
+                "quantidade": 313,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 2419.27
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NF-e",
+                "quantidade": 1,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 43.83
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NF-e",
+                "quantidade": 38,
+                "situacao": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Saída",
+                "valorTotal": 2472.49
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 10,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 369.97
+            }
+        ]
+    },
+    "_req_uuid": "fd62e3a0-4f15-11f1-a1d4-d3eb305dea30"
+}

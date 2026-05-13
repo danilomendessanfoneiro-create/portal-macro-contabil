@@ -7,7 +7,7 @@ import os
 PASTA_RAIZ = r"C:\oneflow_bi\dados_powerbi"
 ARQUIVO_TOKEN = r"C:\oneflow_bi\token_usuario.json"
 
-PERIODOS = ["202601", "202602", "202603", "202604"]
+PERIODOS = ["202604", "202605"]
 
 ENDPOINTS = {
     "notas_detalhe": "/oneflow/empresa/fiscal/documentos/listar",

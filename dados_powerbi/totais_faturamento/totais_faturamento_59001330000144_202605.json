@@ -1,0 +1,26 @@
+{
+    "code": "200",
+    "result": {
+        "totais": [
+            {
+                "competencia": "05/2026",
+                "modelo": "NF-e",
+                "quantidade": 2,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 4757.47
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 165
+            }
+        ]
+    },
+    "_req_uuid": "2be3f2f0-4f16-11f1-b277-13644a49703e"
+}

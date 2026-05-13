@@ -1,0 +1,34 @@
+{
+    "code": "200",
+    "result": {
+        "folha": [
+            {
+                "codigoFolha": "1"
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2026-03-01T18:53:47",
+                                "cargo": "DIRETOR",
+                                "categoria": 722,
+                                "jornada": "",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "1",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "116.982.776-44",
+                    "dataNascimento": "1992-02-28T18:53:47",
+                    "nomeCompleto": "ANNE CAROLINE DE LIMA CLAUDIANO NERY",
+                    "pis": "           ",
+                    "sexo": "Feminino"
+                }
+            }
+        ]
+    },
+    "_req_uuid": "37ddbeb0-4f16-11f1-a6b9-316765867551"
+}

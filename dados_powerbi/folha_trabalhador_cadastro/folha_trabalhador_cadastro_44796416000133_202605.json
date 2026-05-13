@@ -1,0 +1,34 @@
+{
+    "code": "200",
+    "result": {
+        "folha": [
+            {
+                "codigoFolha": "1"
+            },
+            {
+                "colaborador": {
+                    "contratos": [
+                        {
+                            "contrato": {
+                                "admissao": "2025-08-01T18:53:37",
+                                "cargo": "MESTRE DE OBRAS",
+                                "categoria": 101,
+                                "jornada": "Jornada Importada do e-Social",
+                                "localDeTrabalho": "Geral (Estabelecimento interno)",
+                                "matricula": "0001",
+                                "rescisao": null,
+                                "situacaoDoTrabalhador": "Ativo"
+                            }
+                        }
+                    ],
+                    "cpf": "059.476.326-67",
+                    "dataNascimento": "1981-12-13T18:53:37",
+                    "nomeCompleto": "SIDNEI DA SILVA FERREIRA",
+                    "pis": "           ",
+                    "sexo": "Masculino"
+                }
+            }
+        ]
+    },
+    "_req_uuid": "320b9250-4f16-11f1-8fea-ff60a2ea28d9"
+}

@@ -1,0 +1,36 @@
+{
+    "code": "200",
+    "result": {
+        "eventos": [
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "059.476.326-67",
+                                "matricula": "0001",
+                                "nomeCompleto": "SIDNEI DA SILVA FERREIRA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ]
+        ]
+    },
+    "_req_uuid": "30f7ff70-4f16-11f1-ac9a-f940b04c0cc8"
+}
