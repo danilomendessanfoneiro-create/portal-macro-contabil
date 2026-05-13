@@ -109,51 +109,6 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Sitelock Free - setion.com.br (01/03/2026 - 31/03/2026)",
-                        "inssAliquota": 0,
-                        "inssRetencao": false,
-                        "inssValor": 0,
-                        "irrfAliquota": 0,
-                        "irrfRetencao": false,
-                        "irrfValor": 0,
-                        "issAliquota": 2,
-                        "issRetencao": false,
-                        "issValor": 0,
-                        "nomeServico": "Processamento, arm ou hosped dados",
-                        "pisAliquota": 0,
-                        "pisRetencao": false,
-                        "pisValor": 0,
-                        "valorItem": 0.01
-                    }
-                ],
-                "modelo": "NFS-e Nacional",
-                "numero": "1858451",
-                "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "HOSTGATOR BRASIL LTDA.",
-                "serie": "",
-                "situacaoApuracao": "Documento Apurado",
-                "situacaoDocumento": "Emitido",
-                "tipoEmissao": "Terceiros",
-                "tipoMovimento": "Tomado",
-                "valorTotal": 0.01
-            },
-            {
-                "alerta": true,
-                "alterado": false,
-                "competencia": "03/2026",
-                "dataEmissao": "19/03/2026",
-                "dataEscrituracao": "19/03/2026",
-                "documentoClienteFornecedor": "15.754.475/0001-40",
-                "erro": false,
-                "itens": [
-                    {
-                        "codigoServico": "1.03",
-                        "cofinsAliquota": 0,
-                        "cofinsRetencao": false,
-                        "cofinsValor": 0,
-                        "csllAliquota": 0,
-                        "csllRetencao": false,
-                        "csllValor": 0,
                         "descricaoServico": "Plano M - setion.com.br (01/03/2026 - 31/05/2026)",
                         "inssAliquota": 0,
                         "inssRetencao": false,
@@ -181,6 +136,51 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
                 "valorTotal": 48.7
+            },
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "03/2026",
+                "dataEmissao": "19/03/2026",
+                "dataEscrituracao": "19/03/2026",
+                "documentoClienteFornecedor": "15.754.475/0001-40",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "1.03",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Sitelock Free - setion.com.br (01/03/2026 - 31/03/2026)",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 2,
+                        "issRetencao": false,
+                        "issValor": 0,
+                        "nomeServico": "Processamento, arm ou hosped dados",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 0.01
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "1858451",
+                "origem": "Portal da prefeitura (auto)",
+                "razaoSocialClienteFornecedor": "HOSTGATOR BRASIL LTDA.",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 0.01
             },
             {
                 "alerta": true,
@@ -229,5 +229,5 @@
             }
         ]
     },
-    "_req_uuid": "40bf4660-47a1-11f1-9ef5-63171817fec3"
+    "_req_uuid": "37b619d0-4f13-11f1-bb3a-1f1b80bfa2e3"
 }

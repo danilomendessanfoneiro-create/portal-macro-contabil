@@ -1,1 +1,10 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "recibos": {},
+        "status": {},
+        "tipoFolha": {},
+        "valorTotal": {}
+    },
+    "_req_uuid": "9e2edbc0-4f13-11f1-8eb6-5d638edee509"
+}

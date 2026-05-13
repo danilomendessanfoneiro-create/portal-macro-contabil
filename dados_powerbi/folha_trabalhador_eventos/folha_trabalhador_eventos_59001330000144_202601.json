@@ -1,1 +1,103 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "eventos": [
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "035.749.236-60",
+                                "matricula": "1",
+                                "nomeCompleto": "RICARDO SANTANA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": [
+                        {
+                            "finalDasFerias": "2026-01-20T18:35:37",
+                            "finalDoAbono": "",
+                            "idEvento": "     7105670054",
+                            "idFerias": "     7105619173",
+                            "inicioDasFerias": "2025-12-22T18:35:37",
+                            "inicioDoAbono": "",
+                            "periodoAquisitivo": "20/02/2025 a 19/02/2026",
+                            "qtdDiasAbono": 0
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "013.924.426-30",
+                                "matricula": "2",
+                                "nomeCompleto": "CRISTIANE BARBARA TAVARES"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "009.946.566-37",
+                                "matricula": "3",
+                                "nomeCompleto": "ALESSANDRA MIGUEL PAULINO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ]
+        ]
+    },
+    "_req_uuid": "ae728630-4f13-11f1-8d78-bd5300c68fa1"
+}
