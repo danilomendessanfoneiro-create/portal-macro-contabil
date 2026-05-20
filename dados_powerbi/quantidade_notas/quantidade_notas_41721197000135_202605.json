@@ -5,14 +5,14 @@
         "documento": "41.721.197/0001-35",
         "estado": "MG",
         "prefeituraHabilitado": "Sim",
-        "qtdEntradaTomado": 22,
+        "qtdEntradaTomado": 34,
         "qtdSaidaPrestado": 0,
         "razao": "EDIR SABINO DOS REIS 09236646611",
         "regimeApuracao": "Regime de Competência",
         "regimeTributario": "Simples Nacional",
         "statusApuracao": "Andamento",
-        "valorEntradaTomado": 8776.68,
+        "valorEntradaTomado": 13527.8,
         "valorSaidaPrestado": 0
     },
-    "_req_uuid": "12015cb0-4f16-11f1-8686-898c9faebe28"
+    "_req_uuid": "17621910-5439-11f1-b462-49466dcd1743"
 }
