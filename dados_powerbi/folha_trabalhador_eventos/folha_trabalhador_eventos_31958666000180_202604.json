@@ -1,1 +1,344 @@
-"<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+{
+    "code": "200",
+    "result": {
+        "eventos": [
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "092.097.146-60",
+                                "matricula": "1",
+                                "nomeCompleto": "GILSON DA SILVA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "948.297.306-25",
+                                "matricula": "10",
+                                "nomeCompleto": "MARCOS ROSENDO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "099.354.706-01",
+                                "matricula": "11",
+                                "nomeCompleto": "EDUARDO CAMPOS MONTEIRO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "122.492.266-28",
+                                "matricula": "12",
+                                "nomeCompleto": "JEAN AGUILAR CALIXTO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "080.456.376-41",
+                                "matricula": "2",
+                                "nomeCompleto": "EMERSON DOUGLAS DA SILVA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "064.611.946-06",
+                                "matricula": "3",
+                                "nomeCompleto": "ROMARIO VITOR MARCELINO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "297.368.128-63",
+                                "matricula": "4",
+                                "nomeCompleto": "JEAN ANDRADE SILVA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "048.016.056-21",
+                                "matricula": "5",
+                                "nomeCompleto": "CLAUDINEI LOPES BATISTA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "009.941.416-37",
+                                "matricula": "6",
+                                "nomeCompleto": "SIDNEI VITOR EUGENIO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "002.817.396-17",
+                                "matricula": "7",
+                                "nomeCompleto": "OTACILIO DONIZETI EUGENIO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "097.278.496-95",
+                                "matricula": "8",
+                                "nomeCompleto": "ROBSON DE JESUS FERREIRA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ],
+            {
+                "colaborador": [
+                    {
+                        "dadosDoTrabalhador": [
+                            {
+                                "cpf": "053.922.026-40",
+                                "matricula": "9",
+                                "nomeCompleto": "RENATO BENETOLO"
+                            }
+                        ]
+                    }
+                ]
+            },
+            [
+                {
+                    "afastamento": []
+                }
+            ],
+            [
+                {
+                    "ferias": []
+                }
+            ],
+            [
+                {
+                    "desligamento": []
+                }
+            ]
+        ]
+    },
+    "_req_uuid": "a2907720-5f38-11f1-969b-07129f850f17"
+}

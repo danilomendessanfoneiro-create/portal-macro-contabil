@@ -5,11 +5,20 @@
             {
                 "competencia": "05/2026",
                 "modelo": "CT-e",
-                "quantidade": 614,
+                "quantidade": 729,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
-                "valorTotal": 4802.75
+                "valorTotal": 5707.58
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NF-e",
+                "quantidade": 2,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Entrada",
+                "valorTotal": 33828.72
             },
             {
                 "competencia": "05/2026",
@@ -23,22 +32,22 @@
             {
                 "competencia": "05/2026",
                 "modelo": "NF-e",
-                "quantidade": 97,
+                "quantidade": 114,
                 "situacao": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Saída",
-                "valorTotal": 8913.07
+                "valorTotal": 10702.45
             },
             {
                 "competencia": "05/2026",
                 "modelo": "NFS-e Nacional",
-                "quantidade": 11,
+                "quantidade": 15,
                 "situacao": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
-                "valorTotal": 397.71
+                "valorTotal": 606.28
             }
         ]
     },
-    "_req_uuid": "d7bc5880-58f6-11f1-aa76-ddfd135d59f8"
+    "_req_uuid": "6024d570-5f38-11f1-b9ee-3b09158171bc"
 }

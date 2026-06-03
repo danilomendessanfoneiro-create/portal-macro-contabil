@@ -6,6 +6,24 @@
                 "competencia": "05/2026",
                 "modelo": "NFS-e Nacional",
                 "quantidade": 1,
+                "situacao": "Cancelado",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 303.75
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
+                "situacao": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 72.25
+            },
+            {
+                "competencia": "05/2026",
+                "modelo": "NFS-e Nacional",
+                "quantidade": 1,
                 "situacao": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
@@ -13,5 +31,5 @@
             }
         ]
     },
-    "_req_uuid": "b0d08250-58f6-11f1-af89-319ba6f2f263"
+    "_req_uuid": "3f053830-5f38-11f1-88f6-c9b724164243"
 }

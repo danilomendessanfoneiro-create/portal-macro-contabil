@@ -10,7 +10,7 @@
                     "contratos": [
                         {
                             "contrato": {
-                                "admissao": "2025-08-01T08:35:53",
+                                "admissao": "2025-08-01T07:40:01",
                                 "cargo": "MESTRE DE OBRAS",
                                 "categoria": 101,
                                 "jornada": "Jornada Importada do e-Social",
@@ -22,7 +22,7 @@
                         }
                     ],
                     "cpf": "059.476.326-67",
-                    "dataNascimento": "1981-12-13T08:35:53",
+                    "dataNascimento": "1981-12-13T07:40:01",
                     "nomeCompleto": "SIDNEI DA SILVA FERREIRA",
                     "pis": "           ",
                     "sexo": "Masculino"
@@ -30,5 +30,5 @@
             }
         ]
     },
-    "_req_uuid": "0d72cdb0-58f7-11f1-a781-87edf4be5094"
+    "_req_uuid": "92be7a40-5f38-11f1-ac78-571c9aa62767"
 }
