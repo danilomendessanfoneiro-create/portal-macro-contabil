@@ -28,24 +28,24 @@
                         "irrfValor": 0,
                         "issAliquota": 2.01,
                         "issRetencao": false,
-                        "issValor": 6.11,
+                        "issValor": 1.45,
                         "nomeServico": "Instrução, treinamento, orientação",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 303.75
+                        "valorItem": 72.25
                     }
                 ],
                 "modelo": "NFS-e Nacional",
-                "numero": "3844",
+                "numero": "3845",
                 "origem": "Portal NFS-e Nacional (auto)",
                 "razaoSocialClienteFornecedor": "ARPEJO CENTRO DE MUSICA E ARTE LTDA.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
-                "situacaoDocumento": "Cancelado",
+                "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
-                "valorTotal": 303.75
+                "valorTotal": 72.25
             },
             {
                 "alerta": false,
@@ -73,24 +73,24 @@
                         "irrfValor": 0,
                         "issAliquota": 2.01,
                         "issRetencao": false,
-                        "issValor": 1.45,
+                        "issValor": 6.11,
                         "nomeServico": "Instrução, treinamento, orientação",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 72.25
+                        "valorItem": 303.75
                     }
                 ],
                 "modelo": "NFS-e Nacional",
-                "numero": "3845",
+                "numero": "3844",
                 "origem": "Portal NFS-e Nacional (auto)",
                 "razaoSocialClienteFornecedor": "ARPEJO CENTRO DE MUSICA E ARTE LTDA.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
-                "situacaoDocumento": "Emitido",
+                "situacaoDocumento": "Cancelado",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
-                "valorTotal": 72.25
+                "valorTotal": 303.75
             },
             {
                 "alerta": false,
@@ -139,5 +139,5 @@
             }
         ]
     },
-    "_req_uuid": "3ea14640-5f38-11f1-969b-07129f850f17"
+    "_req_uuid": "ca08a720-6580-11f1-b26f-6df578bf41d9"
 }

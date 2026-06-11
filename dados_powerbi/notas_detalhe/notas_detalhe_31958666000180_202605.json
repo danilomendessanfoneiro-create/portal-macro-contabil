@@ -8,7 +8,7 @@
                 "competencia": "05/2026",
                 "dataEmissao": "04/05/2026",
                 "dataEscrituracao": "05/05/2026",
-                "documentoClienteFornecedor": "39.331.296/0002-40",
+                "documentoClienteFornecedor": "23.821.176/0001-00",
                 "erro": false,
                 "itens": [
                     {
@@ -19,7 +19,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de compra: 4200065397",
+                        "descricaoServico": "Pedido de Compra: 148852 GerÃªncia: ANDERSON GIOSIA Comprador: THAIS RESENDE CASTRO CAMARGO",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -27,25 +27,25 @@
                         "irrfRetencao": false,
                         "irrfValor": 0,
                         "issAliquota": 3.84,
-                        "issRetencao": false,
-                        "issValor": 71.04,
+                        "issRetencao": true,
+                        "issValor": 36.15,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 1850
+                        "valorItem": 941.5
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "638",
+                "numero": "640",
                 "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
+                "razaoSocialClienteFornecedor": "PROLUMINAS LUBRIFICANTES LTDA",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 1850
+                "valorTotal": 941.5
             },
             {
                 "alerta": false,
@@ -98,7 +98,7 @@
                 "competencia": "05/2026",
                 "dataEmissao": "04/05/2026",
                 "dataEscrituracao": "05/05/2026",
-                "documentoClienteFornecedor": "23.821.176/0001-00",
+                "documentoClienteFornecedor": "39.331.296/0002-40",
                 "erro": false,
                 "itens": [
                     {
@@ -109,7 +109,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de Compra: 148852 GerÃªncia: ANDERSON GIOSIA Comprador: THAIS RESENDE CASTRO CAMARGO",
+                        "descricaoServico": "Pedido de compra: 4200065397",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -117,25 +117,25 @@
                         "irrfRetencao": false,
                         "irrfValor": 0,
                         "issAliquota": 3.84,
-                        "issRetencao": true,
-                        "issValor": 36.15,
+                        "issRetencao": false,
+                        "issValor": 71.04,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 941.5
+                        "valorItem": 1850
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "640",
+                "numero": "638",
                 "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "PROLUMINAS LUBRIFICANTES LTDA",
+                "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 941.5
+                "valorTotal": 1850
             },
             {
                 "alerta": false,
@@ -154,7 +154,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de compra: 4200065590",
+                        "descricaoServico": "Pedido de compra: 4200065596",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -163,16 +163,16 @@
                         "irrfValor": 0,
                         "issAliquota": 3.84,
                         "issRetencao": false,
-                        "issValor": 113.28,
+                        "issValor": 276.48,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 2950
+                        "valorItem": 7200
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "641",
+                "numero": "643",
                 "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
                 "serie": "",
@@ -180,7 +180,7 @@
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 2950
+                "valorTotal": 7200
             },
             {
                 "alerta": false,
@@ -244,7 +244,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Pedido de compra: 4200065596",
+                        "descricaoServico": "Pedido de compra: 4200065590",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -253,16 +253,16 @@
                         "irrfValor": 0,
                         "issAliquota": 3.84,
                         "issRetencao": false,
-                        "issValor": 276.48,
+                        "issValor": 113.28,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 7200
+                        "valorItem": 2950
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "643",
+                "numero": "641",
                 "origem": "Portal da prefeitura (auto)",
                 "razaoSocialClienteFornecedor": "VERSUNI BRASIL LTDA",
                 "serie": "",
@@ -270,52 +270,7 @@
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 7200
-            },
-            {
-                "alerta": false,
-                "alterado": false,
-                "competencia": "05/2026",
-                "dataEmissao": "13/05/2026",
-                "dataEscrituracao": "14/05/2026",
-                "documentoClienteFornecedor": "00.362.831/0001-03",
-                "erro": false,
-                "itens": [
-                    {
-                        "codigoServico": "14.13",
-                        "cofinsAliquota": 0,
-                        "cofinsRetencao": false,
-                        "cofinsValor": 0,
-                        "csllAliquota": 0,
-                        "csllRetencao": false,
-                        "csllValor": 0,
-                        "descricaoServico": "Solicitante: Ricardo Porto Comprador: Pedro Andrade 43.99 - Assistência técnica em serralheria Pedido de Compra 4500506818 Serviço de serralheria Condição de Pagamento: 45 dias Dados Bancários Banco: Sicoob Agência: 3180 Conta: 29.298-2",
-                        "inssAliquota": 0,
-                        "inssRetencao": false,
-                        "inssValor": 0,
-                        "irrfAliquota": 0,
-                        "irrfRetencao": false,
-                        "irrfValor": 0,
-                        "issAliquota": 3.84,
-                        "issRetencao": true,
-                        "issValor": 161.82,
-                        "nomeServico": "Carpintaria e serralheria",
-                        "pisAliquota": 0,
-                        "pisRetencao": false,
-                        "pisValor": 0,
-                        "valorItem": 4214
-                    }
-                ],
-                "modelo": "NFS-e",
-                "numero": "644",
-                "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "Cooper Standard Autom. Br. Sealing Ltda",
-                "serie": "",
-                "situacaoApuracao": "Documento Apurado",
-                "situacaoDocumento": "Emitido",
-                "tipoEmissao": "Própria",
-                "tipoMovimento": "Prestado",
-                "valorTotal": 4214
+                "valorTotal": 2950
             },
             {
                 "alerta": false,
@@ -366,9 +321,9 @@
                 "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
-                "dataEmissao": "20/05/2026",
-                "dataEscrituracao": "20/05/2026",
-                "documentoClienteFornecedor": "58.295.213/0021-11",
+                "dataEmissao": "13/05/2026",
+                "dataEscrituracao": "14/05/2026",
+                "documentoClienteFornecedor": "00.362.831/0001-03",
                 "erro": false,
                 "itens": [
                     {
@@ -379,7 +334,7 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "ORDER REFERENCE CODE 6100034881 Terms of delivery: FCA Vargin",
+                        "descricaoServico": "Solicitante: Ricardo Porto Comprador: Pedro Andrade 43.99 - Assistência técnica em serralheria Pedido de Compra 4500506818 Serviço de serralheria Condição de Pagamento: 45 dias Dados Bancários Banco: Sicoob Agência: 3180 Conta: 29.298-2",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -388,24 +343,24 @@
                         "irrfValor": 0,
                         "issAliquota": 3.84,
                         "issRetencao": true,
-                        "issValor": 69.12,
+                        "issValor": 161.82,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 1800
+                        "valorItem": 4214
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "646",
+                "numero": "644",
                 "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "PHILIPS MEDICAL SYSTEMS LTDA",
+                "razaoSocialClienteFornecedor": "Cooper Standard Autom. Br. Sealing Ltda",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 1800
+                "valorTotal": 4214
             },
             {
                 "alerta": false,
@@ -413,7 +368,7 @@
                 "competencia": "05/2026",
                 "dataEmissao": "20/05/2026",
                 "dataEscrituracao": "20/05/2026",
-                "documentoClienteFornecedor": "62.000.278/0046-18",
+                "documentoClienteFornecedor": "64.904.295/0057-68",
                 "erro": false,
                 "itens": [
                     {
@@ -424,33 +379,33 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Fabricação e instalação de chapéu chinês",
+                        "descricaoServico": "Nº da linha da requisição:\t1 Solicitante:\t59fmcbraz Numero da Ordem:\t61195355 Descricao complementar:\tFabricacao de Escada para a Porta do Verde - Seguranca Domínio da classificação:\tcustom Código de classificação:\tC2401020",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
                         "irrfAliquota": 0,
                         "irrfRetencao": false,
                         "irrfValor": 0,
-                        "issAliquota": 3,
-                        "issRetencao": true,
-                        "issValor": 21.3,
+                        "issAliquota": 3.84,
+                        "issRetencao": false,
+                        "issValor": 107.52,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 710
+                        "valorItem": 2800
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "647",
+                "numero": "649",
                 "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "MELITTA DO BRASIL INDUSTRIA E COMERCIO LIMITADA",
+                "razaoSocialClienteFornecedor": "CAMIL ALIMENTOS S.A.",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 710
+                "valorTotal": 2800
             },
             {
                 "alerta": false,
@@ -503,7 +458,7 @@
                 "competencia": "05/2026",
                 "dataEmissao": "20/05/2026",
                 "dataEscrituracao": "20/05/2026",
-                "documentoClienteFornecedor": "64.904.295/0057-68",
+                "documentoClienteFornecedor": "62.000.278/0046-18",
                 "erro": false,
                 "itens": [
                     {
@@ -514,7 +469,52 @@
                         "csllAliquota": 0,
                         "csllRetencao": false,
                         "csllValor": 0,
-                        "descricaoServico": "Nº da linha da requisição:\t1 Solicitante:\t59fmcbraz Numero da Ordem:\t61195355 Descricao complementar:\tFabricacao de Escada para a Porta do Verde - Seguranca Domínio da classificação:\tcustom Código de classificação:\tC2401020",
+                        "descricaoServico": "Fabricação e instalação de chapéu chinês",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 3,
+                        "issRetencao": true,
+                        "issValor": 21.3,
+                        "nomeServico": "Carpintaria e serralheria",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 710
+                    }
+                ],
+                "modelo": "NFS-e",
+                "numero": "647",
+                "origem": "Portal da prefeitura (auto)",
+                "razaoSocialClienteFornecedor": "MELITTA DO BRASIL INDUSTRIA E COMERCIO LIMITADA",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Própria",
+                "tipoMovimento": "Prestado",
+                "valorTotal": 710
+            },
+            {
+                "alerta": false,
+                "alterado": false,
+                "competencia": "05/2026",
+                "dataEmissao": "20/05/2026",
+                "dataEscrituracao": "20/05/2026",
+                "documentoClienteFornecedor": "58.295.213/0021-11",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "14.13",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "ORDER REFERENCE CODE 6100034881 Terms of delivery: FCA Vargin",
                         "inssAliquota": 0,
                         "inssRetencao": false,
                         "inssValor": 0,
@@ -522,25 +522,25 @@
                         "irrfRetencao": false,
                         "irrfValor": 0,
                         "issAliquota": 3.84,
-                        "issRetencao": false,
-                        "issValor": 107.52,
+                        "issRetencao": true,
+                        "issValor": 69.12,
                         "nomeServico": "Carpintaria e serralheria",
                         "pisAliquota": 0,
                         "pisRetencao": false,
                         "pisValor": 0,
-                        "valorItem": 2800
+                        "valorItem": 1800
                     }
                 ],
                 "modelo": "NFS-e",
-                "numero": "649",
+                "numero": "646",
                 "origem": "Portal da prefeitura (auto)",
-                "razaoSocialClienteFornecedor": "CAMIL ALIMENTOS S.A.",
+                "razaoSocialClienteFornecedor": "PHILIPS MEDICAL SYSTEMS LTDA",
                 "serie": "",
                 "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Prestado",
-                "valorTotal": 2800
+                "valorTotal": 1800
             },
             {
                 "alerta": false,
@@ -634,5 +634,5 @@
             }
         ]
     },
-    "_req_uuid": "77e6d5a0-5f38-11f1-8915-316538c6f47f"
+    "_req_uuid": "03df7a00-6581-11f1-b06d-57a5f62fdfef"
 }

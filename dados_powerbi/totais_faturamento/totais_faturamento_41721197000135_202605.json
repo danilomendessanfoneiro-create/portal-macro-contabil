@@ -23,11 +23,11 @@
             {
                 "competencia": "05/2026",
                 "modelo": "NFC-e",
-                "quantidade": 93,
+                "quantidade": 109,
                 "situacao": "Emitido",
                 "tipoEmissao": "Própria",
                 "tipoMovimento": "Saída",
-                "valorTotal": 22124.8
+                "valorTotal": 30143.7
             },
             {
                 "competencia": "05/2026",
@@ -40,5 +40,5 @@
             }
         ]
     },
-    "_req_uuid": "71fb06c0-5f38-11f1-9852-dfce29e21e5b"
+    "_req_uuid": "fe550500-6580-11f1-a9f6-a7b50a48d4de"
 }

@@ -136,8 +136,53 @@
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Tomado",
                 "valorTotal": 48.68
+            },
+            {
+                "alerta": true,
+                "alterado": false,
+                "competencia": "05/2026",
+                "dataEmissao": "04/06/2026",
+                "dataEscrituracao": "04/06/2026",
+                "documentoClienteFornecedor": "06.990.590/0001-23",
+                "erro": false,
+                "itens": [
+                    {
+                        "codigoServico": "17.25",
+                        "cofinsAliquota": 0,
+                        "cofinsRetencao": false,
+                        "cofinsValor": 0,
+                        "csllAliquota": 0,
+                        "csllRetencao": false,
+                        "csllValor": 0,
+                        "descricaoServico": "Insercao de publicidade online Id do cliente 2028739829 PAGAMENTO JA RECEBIDO",
+                        "inssAliquota": 0,
+                        "inssRetencao": false,
+                        "inssValor": 0,
+                        "irrfAliquota": 0,
+                        "irrfRetencao": false,
+                        "irrfValor": 0,
+                        "issAliquota": 2.9,
+                        "issRetencao": false,
+                        "issValor": 9.51,
+                        "nomeServico": "Inserção textos, desenhos e out mat",
+                        "pisAliquota": 0,
+                        "pisRetencao": false,
+                        "pisValor": 0,
+                        "valorItem": 328.01
+                    }
+                ],
+                "modelo": "NFS-e Nacional",
+                "numero": "37637378",
+                "origem": "Portal NFS-e Nacional (auto)",
+                "razaoSocialClienteFornecedor": "GOOGLE BRASIL INTERNET LTDA.",
+                "serie": "",
+                "situacaoApuracao": "Documento Apurado",
+                "situacaoDocumento": "Emitido",
+                "tipoEmissao": "Terceiros",
+                "tipoMovimento": "Tomado",
+                "valorTotal": 328.01
             }
         ]
     },
-    "_req_uuid": "886d5570-5f38-11f1-969b-07129f850f17"
+    "_req_uuid": "15d938e0-6581-11f1-822d-13769ce7e4bd"
 }
