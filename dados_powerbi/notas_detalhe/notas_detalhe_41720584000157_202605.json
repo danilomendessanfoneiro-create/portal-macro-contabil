@@ -3,7 +3,7 @@
     "result": {
         "documentos": [
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "02/05/2026",
@@ -80,7 +80,7 @@
                 "valorTotal": 1144
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "05/05/2026",
@@ -213,13 +213,13 @@
                 "valorTotal": 1733
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "09/05/2026",
                 "dataEscrituracao": "09/05/2026",
                 "documentoClienteFornecedor": "56.228.356/0131-10",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -563,14 +563,14 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "CRBS S/A - CDD Varginha",
                 "serie": "22",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 2136.15
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "09/05/2026",
@@ -1319,7 +1319,7 @@
                 "valorTotal": 1001.02
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "12/05/2026",
@@ -1452,13 +1452,13 @@
                 "valorTotal": 1328.62
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "12/05/2026",
                 "dataEscrituracao": "12/05/2026",
                 "documentoClienteFornecedor": "56.228.356/0131-10",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -1914,20 +1914,20 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "CRBS S/A - CDD Varginha",
                 "serie": "22",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 289.23
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "12/05/2026",
                 "dataEscrituracao": "12/05/2026",
                 "documentoClienteFornecedor": "56.228.356/0131-10",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -2271,20 +2271,20 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "CRBS S/A - CDD Varginha",
                 "serie": "22",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 1287.5
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "12/05/2026",
                 "dataEscrituracao": "12/05/2026",
                 "documentoClienteFornecedor": "31.565.104/0218-40",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -4028,20 +4028,20 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "PEPSICO DO BRASIL LTDA",
                 "serie": "112",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 869.53
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "13/05/2026",
                 "dataEscrituracao": "14/05/2026",
                 "documentoClienteFornecedor": "61.186.888/0105-80",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -4833,14 +4833,14 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "SPAL INDUSTRIA BRASILEIRA DE BEBIDAS S/A",
                 "serie": "4",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 1190.75
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "13/05/2026",
@@ -5421,7 +5421,7 @@
                 "valorTotal": 460.16
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "19/05/2026",
@@ -6226,13 +6226,13 @@
                 "valorTotal": 1148.81
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "20/05/2026",
                 "dataEscrituracao": "20/05/2026",
                 "documentoClienteFornecedor": "56.228.356/0131-10",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -6520,14 +6520,14 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "CRBS S/A - CDD Varginha",
                 "serie": "22",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 1256.06
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "21/05/2026",
@@ -6604,7 +6604,7 @@
                 "valorTotal": 1435.41
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "22/05/2026",
@@ -6737,7 +6737,7 @@
                 "valorTotal": 18.81
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "22/05/2026",
@@ -6814,13 +6814,13 @@
                 "valorTotal": 18.73
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "22/05/2026",
                 "dataEscrituracao": "22/05/2026",
                 "documentoClienteFornecedor": "61.186.888/0105-80",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -7444,20 +7444,20 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "SPAL INDUSTRIA BRASILEIRA DE BEBIDAS S/A",
                 "serie": "4",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 638.32
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "26/05/2026",
                 "dataEscrituracao": "26/05/2026",
                 "documentoClienteFornecedor": "56.228.356/0131-10",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -7857,20 +7857,20 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "CRBS S/A - CDD Varginha",
                 "serie": "22",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 3091.3
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "26/05/2026",
                 "dataEscrituracao": "26/05/2026",
                 "documentoClienteFornecedor": "31.565.104/0218-40",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -8438,14 +8438,14 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "PEPSICO DO BRASIL LTDA",
                 "serie": "112",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 374.7
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "26/05/2026",
@@ -8522,13 +8522,13 @@
                 "valorTotal": 16.68
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "27/05/2026",
                 "dataEscrituracao": "27/05/2026",
                 "documentoClienteFornecedor": "04.590.925/0001-90",
-                "erro": true,
+                "erro": false,
                 "itens": [
                     {
                         "aliqCOFINS": 0,
@@ -8760,14 +8760,14 @@
                 "origem": "Importação de NF-e",
                 "razaoSocialClienteFornecedor": "MAXIBOM ALIMENTOS LTDA",
                 "serie": "1",
-                "situacaoApuracao": "Documento Registrado",
+                "situacaoApuracao": "Documento Apurado",
                 "situacaoDocumento": "Emitido",
                 "tipoEmissao": "Terceiros",
                 "tipoMovimento": "Entrada",
                 "valorTotal": 337.59
             },
             {
-                "alerta": true,
+                "alerta": false,
                 "alterado": false,
                 "competencia": "05/2026",
                 "dataEmissao": "28/05/2026",
@@ -9741,5 +9741,5 @@
             }
         ]
     },
-    "_req_uuid": "09e364c0-6581-11f1-91a1-0f5ec8cd9532"
+    "_req_uuid": "a590ec90-6ef4-11f1-b942-756d4e859c87"
 }
